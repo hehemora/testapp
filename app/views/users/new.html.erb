@@ -1,5 +1,5 @@
 <h1>Регистрация</h1>
-<%= form_with model: @user, url: sign_up_path do |form| %>
+<%= form_with model: @user, url: users_path do |form| %>
     <div>
         <% if @user.errors.any?%>
         <div class=”alert alert-danger”>

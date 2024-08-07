@@ -13,8 +13,8 @@ require 'bcrypt'
 class User < ApplicationRecord
     include BCrypt
     has_secure_password
+    belongs_to :role
 
     validates :login, presence: true
     validates :login, uniqueness: true
-
 end

@@ -1,0 +1,14 @@
+<%= form_with model: @article, url: article_path(@article.id), method: "delete" do |f| %>
+  <div>
+      <% if @article.errors.any?%>
+      <div class=”alert alert-danger”>
+          <% @article.errors.full_messages.each do |message| %>
+          <div><%= message %></div>
+          <% end %>
+      </div>
+    <% end %>
+    </div>
+  <p>
+    <%= f.submit 'Удалить статью', class: "button" %>
+  </p>
+<% end %>

@@ -1,0 +1,23 @@
+<%= form_with model: @article, url: article_path(@article.id), method: "patch" do |f| %>
+  <div>
+      <% if @article.errors.any?%>
+      <div class=”alert alert-danger”>
+          <% @article.errors.full_messages.each do |message| %>
+          <div><%= message %></div>
+          <% end %>
+      </div>
+    <% end %>
+    </div>
+  <div class = "mb-3">
+    <%= f.label :title, "Заголовок" %><br>
+    <%= f.text_field :title, class: "articletitle"%>
+  </div>
+  <div class = "mb-3">
+    <%= f.label :body, "Текст статьи" %><br>
+    <%= f.text_area :body, class: "articlebody"%>
+  </div>
+  <p>
+    <%= f.submit 'Сохранить изменения', class: "button" %>
+  </p>
+<% end %>
+<%= render partial: 'articles/delete_article_button'%>
