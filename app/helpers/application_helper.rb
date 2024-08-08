@@ -11,4 +11,12 @@ module ApplicationHelper
     def sign_out
         session.delete :user_id
     end
+
+    def is_editor
+        if @current_user.role_id == Role.find_by(rolename: "editor").id
+            return true
+        else
+            return false
+        end
+    end
 end

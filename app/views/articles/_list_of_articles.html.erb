@@ -1,0 +1,12 @@
+<h1>Список доступных статей</h1>
+<table class = "articlestable">
+  <tr>
+    <th>Название статьи</th>
+  </tr>
+    <% @articles.each do |article| %>
+      <tr><td><a href="/articles/<%= article.id %>">
+        <%= article.title %></td></tr>
+      </a>
+    <% end %>
+</table>
+<%= will_paginate @articles, class: "pagination" %>
