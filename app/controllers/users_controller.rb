@@ -17,22 +17,22 @@ class UsersController < ApplicationController
     end
     
     def index
-        # @users = User.all
-        @users = User.paginate(page: params[:page], per_page: 10)
         if helpers.current_user.blank?
-          render plain: '401 Unauthorized', status: :unauthorized
+            return render plain: '401 Unauthorized', status: :unauthorized
         end
         if !helpers.is_editor
-          render plain: '403 Forbidden', status: :forbidden
+            return render plain: '403 Forbidden', status: :forbidden
         end
+        # @users = User.all
+        @users = User.paginate(page: params[:page], per_page: 10)
     end
 
     def update
         if helpers.current_user.blank?
-            render plain: '401 Unauthorized', status: :unauthorized
+            return render plain: '401 Unauthorized', status: :unauthorized
         end
         if !helpers.is_editor
-            render plain: '403 Forbidden', status: :forbidden
+            return render plain: '403 Forbidden', status: :forbidden
         end
         @user = User.find(params[:id])
         # if @user.role_id == Role.find_by(rolename: "user").id
