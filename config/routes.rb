@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root "pages#mainpage"
 
   get "/secondpage", to: "pages#secondpage"
+  get "/editor_page", to: "pages#editor_page"
   
   # get "/sign_up", to: "users#new"
   # get "/userlistpage", to: "users#show"
@@ -15,7 +16,11 @@ Rails.application.routes.draw do
   # post "/save_article", to: "articles#create"
   # get "/articles/:id", to: "articles#show", as: :article
   # patch "/update_article/:id", to: "articles#update", as: :update_article
-  resources :articles
+  resources :articles do
+    patch :publish, on: :member
+    patch :savefix, on: :member
+  end
+
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
