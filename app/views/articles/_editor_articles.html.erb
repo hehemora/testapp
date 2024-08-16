@@ -1,4 +1,4 @@
-<%= form_with model: @article, url: article_path(@article.id), method: "patch" do |f| %>
+<%= form_with model: @article, url: savefix_article_path(@article.id), method: "patch" do |f| %>
   <div>
   <%= csrf_meta_tags %>
       <% if @article.errors.any?%>
@@ -18,8 +18,7 @@
       <p>
         <%= f.submit 'Сохранить изменения', class: "button" %>
       </p>
-      <%= render partial: 'articles/delete_article_button'%>
-      <%= render partial: 'articles/publish_article_button'%>
+
     </div>
   <% else %>
     <div class = "mb-3">
@@ -28,8 +27,14 @@
       <%= f.text_field :title, class: "articletitle", :readonly=>true%><br>
       <%= f.label :body, "Текст статьи" %><br>
       <%= f.text_area :body, class: "articlebody", :readonly=>true%><br>
-      <%= render partial: 'articles/delete_article_button'%>
+   
     </div>
   <% end %>
 </div>
+<% end %>
+<% if ArticleStatus.find_by(id: @article.article_statuses_id).status == "draft" %>
+  <%= render partial: 'articles/delete_article_button'%>
+  <%= render partial: 'articles/publish_article_button'%>
+<% else %>
+  <%= render partial: 'articles/delete_article_button'%>
 <% end %>

@@ -26,7 +26,7 @@ class ArticlesController < ApplicationController
         end
     end
 
-    def update
+    def savefix
         if helpers.current_user.blank?
             return render plain: '401 Unauthorized', status: :unauthorized
         end
