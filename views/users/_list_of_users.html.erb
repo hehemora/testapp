@@ -1,0 +1,15 @@
+<h1>Список пользователей</h1>
+<table class = "userstable">
+  <tr>
+    <th>Имя пользователя</th>
+    <th>Роль</th>
+    <th>Сменить роль</th>
+  </tr>
+    <% @users.each do |user| %>
+      <tr><td><%= user.login %></td>
+      <td><%= Role.find_by(id: user.role_id).rolename %></td>
+      <td><%= render partial: 'users/change_role_button', locals: {:user => user}%></td>
+      </tr>
+    <% end %>
+</table>
+<%= will_paginate @articles, class: "pagination" %>

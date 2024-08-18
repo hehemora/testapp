@@ -1,0 +1,11 @@
+<% if current_user %>
+    <h1>Добро пожаловать, <%= current_user.login %></h1>
+    <%= render partial: 'articles/list_of_articles'%>
+      <form action="/quit">
+        <p>
+          <input type="submit" class = "button" value="Выход" />
+        </p>
+      </form>
+<% else %>
+  <h1>Уээээ</h1>
+<% end %>
