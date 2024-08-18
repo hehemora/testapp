@@ -9,7 +9,8 @@ class PagesController < ApplicationController
       redirect_to editor_page_path
     end
     # @articles = Article.all
-    @articles = Article.paginate(page: params[:page], per_page: 10)
+    @articles = Article.where(article_statuses_id: 2).paginate(page: params[:page], per_page: 10)
+    # @articles = Article.paginate(page: params[:page], per_page: 10)
   end
 
   def editor_page
