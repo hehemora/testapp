@@ -4,9 +4,11 @@
     <th>Название статьи</th>
   </tr>
     <% @articles.each do |article| %>
-      <tr><td><a href="/articles/<%= article.id %>">
-        <%= article.title %></td></tr>
-      </a>
+      <% if ArticleStatus.find_by(id: article.article_statuses_id).status == "ready" %>
+        <tr><td><a href="/articles/<%= article.id %>">
+          <%= article.title %></td></tr>
+        </a>
+      <% end %>
     <% end %>
 </table>
 <%= will_paginate @articles, class: "pagination" %>
