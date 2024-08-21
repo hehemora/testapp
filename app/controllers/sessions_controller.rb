@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
     if @user && @user.authenticate(params[:user][:password])
       session[:user_id] = @user.id
-      redirect_to secondpage_path
+      redirect_to main_page_path
     else
       flash[:alert] = "Login failed"
       redirect_to root_path

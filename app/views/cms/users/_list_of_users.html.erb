@@ -8,8 +8,8 @@
     <% @users.each do |user| %>
       <tr><td><%= user.login %></td>
       <td><%= Role.find_by(id: user.role_id).rolename %></td>
-      <td><%= render partial: 'users/change_role_button', locals: {:user => user}%></td>
+      <td><%= render partial: 'cms/users/change_role_button', locals: {:user => user}%></td>
       </tr>
     <% end %>
 </table>
-<%= will_paginate @articles, class: "pagination" %>
+<%= will_paginate @users, class: "pagination" %>

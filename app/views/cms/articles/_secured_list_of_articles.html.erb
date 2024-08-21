@@ -5,7 +5,7 @@
      <th>Статус</th>
   </tr>
     <% @articles.each do |article| %>
-      <tr><td><a href="/articles/<%= article.id %>">
+      <tr><td><a href="/cms/articles/<%= article.id %>">
         <%= article.title %></td>
       </a>
       <td><% if ArticleStatus.find_by(id: article.article_statuses_id).status == "draft" %>

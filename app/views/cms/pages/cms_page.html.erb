@@ -1,13 +1,13 @@
 <% if current_user %>
     <h1>Добро пожаловать, <%= current_user.login %></h1>
-    <%= render partial: 'articles/secured_list_of_articles'%>
+    <%= render partial: 'cms/articles/secured_list_of_articles'%>
       <% if current_user and is_editor %>
-        <form action="/articles/new">
+        <form action="/cms/articles/new">
           <p>
             <input type="submit" class = "button" value="Добавить статью" />
           </p>
         </form>
-        <form action="/users">
+        <form action="/cms/users">
           <p>
             <input type="submit" class = "button" value="Добавить редактора" />
           </p>

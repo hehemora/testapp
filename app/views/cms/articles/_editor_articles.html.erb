@@ -1,4 +1,4 @@
-<%= form_with model: @article, url: savefix_article_path(@article.id), method: "patch" do |f| %>
+<%= form_with model: @article, url: savefix_cms_article_path(@article.id), method: "patch" do |f| %>
   <div>
   <%= csrf_meta_tags %>
       <% if @article.errors.any?%>
@@ -33,8 +33,8 @@
 </div>
 <% end %>
 <% if ArticleStatus.find_by(id: @article.article_statuses_id).status == "draft" %>
-  <%= render partial: 'articles/delete_article_button'%>
-  <%= render partial: 'articles/publish_article_button'%>
+  <%= render partial: 'cms/articles/delete_article_button'%>
+  <%= render partial: 'cms/articles/publish_article_button'%>
 <% else %>
-  <%= render partial: 'articles/delete_article_button'%>
+  <%= render partial: 'cms/articles/delete_article_button'%>
 <% end %>
