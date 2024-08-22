@@ -10,14 +10,16 @@
     <% end %>
     </div>
   <div class = "mb-3">
-    <%= f.label :title, "Заголовок" %><br>
-    <%= f.text_field :title, class: "articletitle"%>
+    <label> Заголовок </label><br>
+    <input type="text", name="article[title]", value="<%= @article.title %>", class="articletitle"/>
   </div>
   <div class = "mb-3">
-    <%= f.label :body, "Текст статьи" %><br>
-    <%= f.text_area :body, class: "articlebody" %>
+    <label> Текст статьи </label><br>
+    <textarea type="text", name="article[body]" class="articlebody">
+    <%= @article.body %>
+    </textarea>
   </div>
   <p>
-    <%= f.submit 'Сохранить статью', class: "button" %>
+    <input type="submit", class="button", value="Сохранить статью" />
   </p>
 <% end %>

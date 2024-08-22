@@ -10,21 +10,21 @@
         <% end %>
     </div>
     <div class="mb-3">
-        <%= form.label :login, "Логин" %><br>
-        <%=form.text_field :login, class: "form-control form-control-lg", class: "tfield"%>
+        <label> Логин </label><br>
+        <input type="text", name="user[login]", class="tfield" />
     </div>
 
     <div class="mb-3">
-        <%= form.label :password, "Пароль" %><br>
-        <%=form.text_field :password, class: "form-control form-control-lg", class: "tfield"%>
+        <label> Пароль </label><br>
+        <input type="text", name="user[password]", class="tfield" />
     </div>
 
     <div class="mb-3">
-        <%= form.label :password_confirmation, "Подтверждение пароля" %><br>
-        <%=form.text_field :password_confirmation, class: "form-control form-control-lg", class: "tfield"%>
+        <label> Подтверждение пароля </label><br>
+        <input type="text", name="user[password_confirmation]", class="tfield" />
     </div>
     <p>
-        <%= form.submit "Регистрация", class: "button"%>
+        <input type="submit", class="button", value="Регистрация" />
     </p>
 <% end %>
     
