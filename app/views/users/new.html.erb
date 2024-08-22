@@ -1,0 +1,30 @@
+<h1>Регистрация</h1>
+<%= form_with model: @user, url: users_path do |form| %>
+    <div>
+        <% if @user.errors.any?%>
+        <div class=”alert alert-danger”>
+            <% @user.errors.full_messages.each do |message| %>
+            <div><%= message %></div>
+            <% end %>
+        </div>
+        <% end %>
+    </div>
+    <div class="mb-3">
+        <label> Логин </label><br>
+        <input type="text", name="user[login]", class="tfield" />
+    </div>
+
+    <div class="mb-3">
+        <label> Пароль </label><br>
+        <input type="text", name="user[password]", class="tfield" />
+    </div>
+
+    <div class="mb-3">
+        <label> Подтверждение пароля </label><br>
+        <input type="text", name="user[password_confirmation]", class="tfield" />
+    </div>
+    <p>
+        <input type="submit", class="button", value="Регистрация" />
+    </p>
+<% end %>
+    

@@ -1,0 +1,21 @@
+<%= form_with model: @article, url: article_path(@article.id), method: "get" do |f| %>
+  <div>
+      <% if @article.errors.any?%>
+      <div class=”alert alert-danger”>
+          <% @article.errors.full_messages.each do |message| %>
+          <div><%= message %></div>
+          <% end %>
+      </div>
+    <% end %>
+    </div>
+  <div class = "mb-3">
+    <label> Заголовок </label><br>
+    <input type="text", value="<%= @article.title %>", class="articletitle", readonly="true" />
+  </div>
+  <div class = "mb-3">
+    <label> Текст статьи </label><br>
+    <textarea type="text", class="articlebody", readonly="true">
+    <%= @article.body %>
+    </textarea>
+  </div>
+<% end %>

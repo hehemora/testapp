@@ -1,0 +1,23 @@
+<% if current_user %>
+    <h1>Добро пожаловать, <%= current_user.login %></h1>
+    <%= render partial: 'cms/articles/secured_list_of_articles'%>
+      <% if current_user and is_editor %>
+        <form action="/cms/articles/new">
+          <p>
+            <input type="submit" class = "button" value="Добавить статью" />
+          </p>
+        </form>
+        <form action="/cms/users">
+          <p>
+            <input type="submit" class = "button" value="Добавить редактора" />
+          </p>
+        </form>
+      <% end %>
+      <form action="/quit">
+        <p>
+          <input type="submit" class = "button" value="Выход" />
+        </p>
+      </form>
+<% else %>
+  <h1>Уээээ</h1>
+<% end %>
