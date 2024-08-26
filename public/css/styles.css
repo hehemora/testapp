@@ -1,0 +1,269 @@
+*, body {
+    box-sizing: border-box;
+}
+* {padding:0;margin:0}
+
+/* Шрифты */
+p {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+body {
+    background-color: #F8F9FA;
+    box-sizing: border-box;
+    font-family: 'Inter';
+    color: #212529;
+}
+.headline {
+    display: block;
+    margin-top: 38px;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+}
+.headline-h2 {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+.logo {
+    display: block;
+    width: 110px;
+}
+.head-logo {
+    display: block;
+    margin: 0 auto;
+    width: 350px;
+    margin-top: 10%;
+}
+.footer {
+    display: block;
+    margin: 0 auto;
+    width: 350px;
+}
+
+/* Поля для ввода */
+
+.container-w {
+    display: block;
+    margin: 0 auto;
+    width: 350px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.log-input {
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+
+    border-radius: 8px 8px 0px 0px;
+    border: 1px solid #DEE2E6;
+
+    background-color: white;
+}
+.pass-input {
+    display: block;
+    width: 350px;
+    height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+
+    border-radius: 0px 0px 8px 8px;
+    border-top: none;
+    border-right: 1px solid #DEE2E6;
+    border-bottom: 1px solid #DEE2E6;
+    border-left: 1px solid #DEE2E6;
+
+    background-color: white;
+}
+.r-pass-input {
+    display: block;
+    margin-top: 15px;
+    width: 350px;
+    height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+
+    border-radius: 8px 8px 8px 8px;
+    border: 1px solid #DEE2E6;
+
+    background-color: white;
+}
+.log-input:focus, .pass-input:focus, .r-pass-input:focus {
+    outline: none;
+}
+.log-input:focus-visible {
+    border: 2px solid #0D6EFD;
+    border-color: #0D6EFD;
+}
+.pass-input:focus-visible {
+    border: 2px solid #0D6EFD;
+    border-color: #0D6EFD;
+}
+.log-pass-inputs {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.r-pass-input:focus {
+    border: 2px solid #0D6EFD;
+    border-color: #0D6EFD;
+}
+
+.log-input:hover, .pass-input:hover, .r-pass-input:hover {
+    border: 2px solid #0D6EFD;
+    border-color: #0D6EFD;
+}
+
+/* Чек-бокс */
+
+.container-checkbox {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 350px;
+    align-items: center;
+}
+.c-box {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+/* Кнопки */
+
+.sign-button {
+    display: block;
+    width: 350px;
+    height: 50px;
+
+    background-color: #0D6EFD;
+    color: white;
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    transition: 200ms ease-in;
+}
+.sign-button:hover {
+    background-color: #0C53BB;
+    color: white;
+}
+.buttons {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+.a-button {
+    display: block;
+    width: 350px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+
+    border-radius: 8px;
+
+    background-color: #0D6EFD;
+    color: white;
+    
+    transition: 200ms ease-out;
+}
+.a-button:hover {
+    background-color: #0C53BB;
+}
+/* Колонки */
+.columns {
+    display: flex;
+    align-items: flex-start;
+}
+.column-1 {
+    display: flex;
+    width: fit-content;
+}
+
+/* Навигация */
+
+.nav-bar {
+    display: block;
+    position: fixed;
+    width: 280px;
+    height: 100%;
+    background-color: #212529;
+}
+.nav-points {
+    display: flex;
+    width: 250px;
+    height: 40px;
+    padding: 11px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    border-radius: 5px;
+}
+.nav-points:hover {
+    background-color: #0D6EFD;
+}
+.p-nav-point {
+    font-size: 14px;
+    width: 196px;
+    flex-shrink: 0;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    color: white;
+}
+.container-logo {
+    display: flex;
+    width: 280px;
+    height: 90px;
+    padding: 20px 203px 20px 15px;
+    align-items: center;
+    flex-shrink: 0;
+}
+.container-nav-points {
+    display: flex;
+    margin-top: 40px;
+    width: 280px;
+    padding: 20px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}

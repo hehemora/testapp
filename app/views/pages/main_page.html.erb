@@ -1,15 +1,35 @@
-<h1>Добро пожаловать, <%= current_user.login %></h1>
-<%= render partial: 'articles/list_of_articles'%>
-<form action="/quit">
-  <p>
-    <input type="submit" class = "button" value="Выход" />
-  </p>
-</form>
-<% if current_user and is_editor%>
-  <form action="/cms/cms_page">
-    <p>
-      <input type="submit" class = "button" value="CMS" />
-    </p>
-  </form>
-<% end %>
-
+<div>
+  <style>
+  header {display:none}
+  footer {display:none}
+  </style>
+  <div class="columns">
+    <div class="nav-bar">
+      <div class="container-logo"><img src="/img/dashboard-logo.svg" class="sp-logo" alt=""></div>
+      <div class="username"><p class="user"><%= current_user.login %></p></div>
+      <nav class="container-nav-points">
+        <a href="#" class="nav-point"><img src="/icons/icon-news.svg"><p class="point-txt">Материалы</p></a>
+        <a href="#" class="nav-point"><img src="/icons/icon-publications.svg"><p class="point-txt">Публикация</p></a>
+        <a href="#" class="nav-point"><img src="/icons/icon-tv.svg"><p class="point-txt">Программы</p></a>
+        <a href="#" class="nav-point"><img src="/icons/icon-multimedia.svg"><p class="point-txt">Мультимедиа</p></a>
+        <a href="#" class="nav-point"><img src="/icons/icon-users.svg"><p class="point-txt">Пользователи</p></a>
+        <a href="#" class="nav-point"><img src="/icons/icon-support.svg"><p class="point-txt">Обратная связь</p></a>
+        <a href="#" class="nav-point"><img src="/icons/icon-settings.svg"><p class="point-txt">Настройки</p></a>
+      </nav>
+      <%= current_user.login %>
+      <form action="/quit">
+        <p><input type="submit" class = "log-out" value="Выход" /></p>
+      </form>
+    </div>
+    <div class="content">
+      <div class="container-filters"></div>
+      <div class="container-materials"><%= render partial: 'articles/list_of_articles'%></div>
+    </div>
+      <% if current_user and is_editor%>
+        <form action="/cms/cms_page">
+          <p><input type="submit" class = "button" value="CMS" /></p>
+        </form>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,27 +1,10 @@
-<<<<<<< HEAD
 <div class="container-w">
-    <h1 class="headline">Авторизация</h1>
-    <%= form_with model: @user, url: auth_path do |f| %>
-        <div class="log-pass-inputs">
-            <%= f.text_field :login, class: "log-input"%>
-            <%= f.password_field :password, class: "pass-input" %>
-        </div>
-            <%= f.submit 'Вход', class: "sign-button" %>
-    <% end %>
+  <h1 class="headline">Авторизация</h1>
+  <%= form_with model: @user, url: auth_path do |f| %>
+    <div class="log-pass-inputs">
+      <input type="login", name="user[login]", class="log-input" />
+      <input type="password", name="user[password]", class="pass-input" />
+    </div>
+      <input type="submit", class="sign-button", value="Вход" />
+  <% end %>
 </div>
-=======
-<h1>Авторизация</h1>
-<%= form_with model: @user, url: auth_path do |f| %>
-  <div class = "mb-3">
-    <label> Логин </label><br>
-    <input type="login", name="user[login]", class="tfield" />
-  </div>
-  <div class = "mb-3">
-    <label> Пароль </label><br>
-    <input type="password", name="user[password]", class="tfield" />
-  </div>
-  <p>
-    <input type="submit", class="button", value="Вход" />
-  </p>
-<% end %>
->>>>>>> 935607719ef8961999e0111d3b345caed5582252

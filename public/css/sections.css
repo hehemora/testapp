@@ -1,0 +1,134 @@
+/* Общие стили */
+* {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+    font-family: 'Inter';
+}
+
+
+.container-logo {
+    display: block;
+    width: 280px;
+    height: 90px;
+    border-bottom: 1px solid #343639;
+}
+.container-filters {
+    display: block;
+    width: 100%;
+    height: 90px;
+    background-color: #EAEFF8;
+}
+.sp-logo {
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+}
+
+.username {
+    display: inline-flex;
+    width: 90%;
+    margin-top: 20px;
+    padding: 15px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+.user {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.container-nav-points {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+
+.nav-bar {
+    display: block;
+    position: relative;
+    width: 15%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #212521;
+}
+.nav-point {
+    display: flex;
+    width: 100%;
+    padding: 5% 5%;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 100ms ease-out;
+}
+.nav-point:hover {
+    background-color: #0D6EFD;
+}
+.nav-point:active {
+    background-color: #0D6EFD;
+}
+.point-txt {
+    width: 90%;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%
+}
+
+/* Колонки */
+.columns {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+.content {
+    display: block;
+    margin-left: 15%;
+    width: 85%;
+}
+
+/* Кнопки */
+
+.log-out {
+    display: flex;
+    position: absolute;
+    left: 5%;
+    bottom: 20px;
+    width: 90%;
+    height: 40px;
+    padding: 13px 0px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: #0D6EFD;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 100ms ease-out;
+}
+.log-out:hover {
+    background-color: #013F9A;
+}
