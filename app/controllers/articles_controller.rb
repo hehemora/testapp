@@ -1,8 +1,6 @@
 class ArticlesController < ApplicationController
+    before_action :current_user, only: [:show]
     def show
-        if helpers.current_user.blank?
-            return render plain: '401 Unauthorized', status: :unauthorized
-        end
         @article = Article.find(params[:id])
     end
 

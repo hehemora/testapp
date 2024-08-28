@@ -1,35 +1,16 @@
 module Cms
-    class ArticlesController < ApplicationController
-        layout 'cms'
-        before_action :check, only: [:is_editor]
+    class ArticlesController < CmsController
+        before_action :is_editor, only: [:new, :show, :create, :update, :destroy, :publish]
 
         def new
-            if helpers.current_user.blank?
-                return render plain: '401 Unauthorized', status: :unauthorized
-            end
-            # if !helpers.is_editor
-            #     return render plain: '403 Forbidden', status: :forbidden
-            # end
             @article = Article.new
         end
         
         def show
-            if helpers.current_user.blank?
-                return render plain: '401 Unauthorized', status: :unauthorized
-            end
-            # if !helpers.is_editor
-            #     return render plain: '403 Forbidden', status: :forbidden
-            # end
             @article = Article.find(params[:id])
         end
 
         def create
-            if helpers.current_user.blank?
-                return render plain: '401 Unauthorized', status: :unauthorized
-            end
-            # if !helpers.is_editor
-            #     return render plain: '403 Forbidden', status: :forbidden
-            # end
             @article = Article.new(article_params)
             if @article.save
                 flash[:notice] = "Статья успешно добавлена"
@@ -40,12 +21,6 @@ module Cms
         end
 
         def update
-            if helpers.current_user.blank?
-                return render plain: '401 Unauthorized', status: :unauthorized
-            end
-            # if !helpers.is_editor
-            #     return render plain: '403 Forbidden', status: :forbidden
-            # end
             @article = Article.find(params[:id])
             if @article.update article_params
                 redirect_to cms_cms_page_path
@@ -56,12 +31,6 @@ module Cms
         end
 
         def destroy
-            if helpers.current_user.blank?
-                return render plain: '401 Unauthorized', status: :unauthorized
-            end
-            # if !helpers.is_editor
-            #     return render plain: '403 Forbidden', status: :forbidden
-            # end
             @article = Article.find(params[:id])
             if @article.destroy 
                 redirect_to cms_cms_page_path
@@ -72,12 +41,6 @@ module Cms
         end
 
         def publish
-            if helpers.current_user.blank?
-                return render plain: '401 Unauthorized', status: :unauthorized
-            end
-            # if !helpers.is_editor
-            #     return render plain: '403 Forbidden', status: :forbidden
-            # end
             @article = Article.find(params[:id])
             
             if @article.update(article_statuses_id: ArticleStatus.find_by(status: "ready").id)

@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
     add_flash_types :info, :error, :success
-    def is_editor
-        if @current_user.role_id == Role.find_by(rolename: "editor").id
-            return true
+    def current_user
+        if helpers.current_user.blank?
+            return render plain: '401 Unauthorized', status: :unauthorized
         end
     end
 end
