@@ -1,6 +1,4 @@
 class ArticlesController < ApplicationController
-    add_flash_types :info, :error, :success
-
     def show
         if helpers.current_user.blank?
             return render plain: '401 Unauthorized', status: :unauthorized

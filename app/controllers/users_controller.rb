@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-    add_flash_types :info, :error, :success
     def auth
     end
     def new

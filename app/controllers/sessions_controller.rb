@@ -16,7 +16,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    helpers.sign_out
+    session.delete :user_id
+    # helpers.sign_out
     flash[:notice] = "Вы вышли из аккаунта"
     redirect_to root_path
   end
