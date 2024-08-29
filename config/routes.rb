@@ -14,7 +14,13 @@ Rails.application.routes.draw do
   get "/auth", to: "sessions#new"
   post "/auth", to: "sessions#create"
   get "/quit", to: "sessions#destroy"
-  
+
+  namespace :api do
+    get "articles", to: "articles#index"
+    get "article/:id", to: "articles#show"
+    get "article", to: "articles#show"
+  end
+
   resources :articles 
   namespace :cms do
     resources :articles do
