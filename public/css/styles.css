@@ -143,7 +143,9 @@ body {
     border: 2px solid #0D6EFD;
     border-color: #0D6EFD;
 }
-
+.log-input::placeholder, .pass-input::placeholder, .r-pass-input::placeholder {
+    color: #9AA8B7;
+}
 /* Чек-бокс */
 
 .container-checkbox {

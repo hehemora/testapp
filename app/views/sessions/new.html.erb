@@ -2,8 +2,8 @@
   <h1 class="headline">Авторизация</h1>
   <%= form_with model: @user, url: auth_path do |f| %>
     <div class="log-pass-inputs">
-      <input type="login", name="user[login]", class="log-input" />
-      <input type="password", name="user[password]", class="pass-input" />
+      <input type="login", name="user[login]", class="log-input", placeholder="Логин" />
+      <input type="password", name="user[password]", class="pass-input", placeholder="Пароль" />
     </div>
       <input type="submit", class="sign-button", value="Вход" />
   <% end %>
