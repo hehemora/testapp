@@ -7,14 +7,16 @@
     <div class="nav-bar">
       <div class="container-logo"><img src="/img/dashboard-logo.svg" class="sp-logo" alt=""></div>
       <div class="username"><p class="user"><%= current_user.login %></p></div>
-      <nav class="container-nav-points">
-        <a href="#" class="nav-point"><p class="point-txt materials">Материалы</p></a>
-        <a href="#" class="nav-point"><p class="point-txt publications">Публикация</p></a>
-        <a href="#" class="nav-point"><p class="point-txt programms">Программы</p></a>
-        <a href="#" class="nav-point"><p class="point-txt multimedia">Мультимедиа</p></a>
-        <a href="#" class="nav-point"><p class="point-txt users">Пользователи</p></a>
-        <a href="#" class="nav-point"><p class="point-txt help">Обратная связь</p></a>
-        <a href="#" class="nav-point"><p class="point-txt settings">Настройки</p></a>
+      <nav>
+        <ul class="container-nav-points">
+          <li class="nav-point"><a href="#" class="point-txt materials">Материалы</a></li>
+          <li class="nav-point"><a href="#" class="point-txt publications">Публикация</a></li>
+          <li class="nav-point"><a href="#" class="point-txt programms">Программы</a></li>
+          <li class="nav-point"><a href="#" class="point-txt multimedia">Мультимедиа</a></li>
+          <li class="nav-point"><a href="#" class="point-txt users">Пользователи</a></li>
+          <li class="nav-point"><a href="#" class="point-txt help">Обратная связь</a></li>
+          <li class="nav-point"><a href="#" class="point-txt settings">Настройки</a></li>
+        </ul>
       </nav>
       <%= current_user.login %>
       <form action="/quit">
