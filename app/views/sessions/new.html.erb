@@ -1,0 +1,14 @@
+<h1>Авторизация</h1>
+<%= form_with model: @user, url: auth_path do |f| %>
+  <div class = "mb-3">
+    <label> Логин </label><br>
+    <input type="login", name="user[login]", class="tfield" />
+  </div>
+  <div class = "mb-3">
+    <label> Пароль </label><br>
+    <input type="password", name="user[password]", class="tfield" />
+  </div>
+  <p>
+    <input type="submit", class="button", value="Вход" />
+  </p>
+<% end %>
