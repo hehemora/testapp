@@ -9,7 +9,7 @@ class UsersController < ApplicationController
         if @user.save
             session[:user_id] = @user.id
             flash[:notice] = "Вы прошли регистрацию"
-            redirect_to main_page_path
+            redirect_to  main_page_cms_pages_path
         else
             render:new
         end

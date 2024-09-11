@@ -28,6 +28,12 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :cms do
+    resources :pages do
+      get :main_page, on: :collection
+    end
+  end
+
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
