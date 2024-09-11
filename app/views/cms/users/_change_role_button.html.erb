@@ -1,0 +1,20 @@
+<%= form_with model: user, url: cms_user_path(user.id), method: "patch" do |f| %>
+  <div>
+      <% if user.errors.any?%>
+      <div class=”alert alert-danger”>
+          <% user.errors.full_messages.each do |message| %>
+          <div><%= message %></div>
+          <% end %>
+      </div>
+      <% end %>
+      <select name="user[role_id]" <% if user == current_user %>disabled<% end %> >
+      <% Role.find_each do |role| %>
+      <option value="<%= role.id %>" <% if role.id == user.role_id %> selected <% end %>> <%= role.rolename%></option>
+      <% end %>
+      </select>
+      <p>
+      <%= f.submit 'Сохранить изменения', class: "rolebutton" %>
+      </p>
+  </div>
+<% end %>
+    

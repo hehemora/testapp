@@ -1,0 +1,42 @@
+<%= form_with model: @article, url: cms_article_path(@article.id), method: "patch" do |f| %>
+  <div>
+  <%= csrf_meta_tags %>
+      <% if @article.errors.any?%>
+      <div class=”alert alert-danger”>
+          <% @article.errors.full_messages.each do |message| %>
+          <div><%= message %></div>
+          <% end %>
+      </div>
+      <% end %>
+  <% if ArticleStatus.find_by(id: @article.article_statuses_id).status == "draft" %>
+    <div class = "mb-3">
+      Статус статьи: Черновик <br>
+      <label> Заголовок </label><br>
+      <input type="text", name="article[title]", value="<%= @article.title %>", class="articletitle"/><br>
+      <label> Текст статьи </label><br>
+      <textarea type="text", name="article[body]" class="articlebody">
+      <%= @article.body %>
+      </textarea>
+      <p>
+        <input type="submit", class="button", value="Сохранить изменения" />
+      </p>
+
+    </div>
+  <% else %>
+    <div class = "mb-3">
+      Статус статьи: Опубликовано <br>
+      <input type="text", name="article[title]", value="<%= @article.title %>", class="articletitle", readonly="true" /><br>
+      <label> Текст статьи </label><br>
+      <textarea type="text", name="article[body]" class="articlebody", readonly="true">
+      <%= @article.body %>
+      </textarea>
+    </div>
+  <% end %>
+</div>
+<% end %>
+<% if ArticleStatus.find_by(id: @article.article_statuses_id).status == "draft" %>
+  <%= render partial: 'cms/articles/delete_article_button'%>
+  <%= render partial: 'cms/articles/publish_article_button'%>
+<% else %>
+  <%= render partial: 'cms/articles/delete_article_button'%>
+<% end %>

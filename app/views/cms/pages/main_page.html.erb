@@ -1,0 +1,15 @@
+<h1>Добро пожаловать, <%= current_user.login %></h1>
+<%= render partial: 'articles/list_of_articles'%>
+<form action="/quit">
+  <p>
+    <input type="submit" class = "button" value="Выход" />
+  </p>
+</form>
+<% if current_user and is_editor%>
+  <form action="/cms/cms_page">
+    <p>
+      <input type="submit" class = "button" value="CMS" />
+    </p>
+  </form>
+<% end %>
+
