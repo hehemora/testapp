@@ -24,7 +24,16 @@
       </form>
     </div>
     <div class="content">
-      <div class="container-filters"></div>
+      <div class="container-filters">
+        <div class="dropdown">
+          <button class="dropdown-btn">Список</button>
+          <ul class="dropdown-content disp">
+            <li><a class="dropdown-link" href="#">Ссылка 1</a></li>
+            <li><a class="dropdown-link" href="#">Ссылка 2</a></li>
+            <li><a class="dropdown-link" href="#">Ссылка 3</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="container-materials"><%= render partial: 'articles/list_of_articles'%></div>
     </div>
       <% if current_user and is_editor%>
