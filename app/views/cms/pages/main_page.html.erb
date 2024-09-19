@@ -4,43 +4,45 @@
   footer {display:none}
   </style>
   <div class="columns">
-    <div class="nav-bar">
-      <div class="container-logo"><img src="/img/dashboard-logo.svg" class="sp-logo" alt=""></div>
-      <div class="username"><p class="user"><%= current_user.login %></p></div>
-      <nav>
-        <ul class="container-nav-points">
-          <li class="nav-point"><a href="#" class="point-txt materials">Материалы</a></li>
-          <li class="nav-point"><a href="#" class="point-txt publications">Публикация</a></li>
-          <li class="nav-point"><a href="#" class="point-txt programms">Программы</a></li>
-          <li class="nav-point"><a href="#" class="point-txt multimedia">Мультимедиа</a></li>
-          <li class="nav-point"><a href="#" class="point-txt users">Пользователи</a></li>
-          <li class="nav-point"><a href="#" class="point-txt help">Обратная связь</a></li>
-          <li class="nav-point"><a href="#" class="point-txt settings">Настройки</a></li>
-        </ul>
-      </nav>
-      <%= current_user.login %>
-      <form action="/quit">
-        <p><input type="submit" class = "log-out" value="Выход" /></p>
-      </form>
-    </div>
-    <div class="content">
-      <div class="container-filters">
-        <div class="dropdown">
-          <button class="dropdown-btn">Список</button>
-          <ul class="dropdown-content disp">
-            <li><a class="dropdown-link" href="#">Ссылка 1</a></li>
-            <li><a class="dropdown-link" href="#">Ссылка 2</a></li>
-            <li><a class="dropdown-link" href="#">Ссылка 3</a></li>
+    <main>
+      <div class="nav-bar">
+        <div class="container-logo"><img src="/img/dashboard-logo.svg" class="sp-logo" alt=""></div>
+        <div class="username"><p class="user"><%= current_user.login %></p></div>
+        <nav>
+          <ul class="container-nav-points">
+            <li class="nav-point"><a href="#" class="point-txt materials">Материалы</a></li>
+            <li class="nav-point"><a href="#" class="point-txt publications">Публикация</a></li>
+            <li class="nav-point"><a href="#" class="point-txt programms">Программы</a></li>
+            <li class="nav-point"><a href="#" class="point-txt multimedia">Мультимедиа</a></li>
+            <li class="nav-point"><a href="#" class="point-txt users">Пользователи</a></li>
+            <li class="nav-point"><a href="#" class="point-txt help">Обратная связь</a></li>
+            <li class="nav-point"><a href="#" class="point-txt settings">Настройки</a></li>
           </ul>
-        </div>
-      </div>
-      <div class="container-materials"><%= render partial: 'articles/list_of_articles'%></div>
-    </div>
-      <% if current_user and is_editor%>
-        <form action="/cms/cms_page">
-          <p><input type="submit" class = "button" value="CMS" /></p>
+        </nav>
+        <%= current_user.login %>
+        <form action="/quit">
+          <p><input type="submit" class = "log-out" value="Выход" /></p>
         </form>
-      <% end %>
-    </div>
+      </div>
+      <div class="content">
+        <div class="container-filters">
+          <div class="dropdown">
+            <button class="dropdown-btn">Список</button>
+            <ul class="dropdown-content disp">
+              <li><a class="dropdown-link" href="#">Ссылка 1</a></li>
+              <li><a class="dropdown-link" href="#">Ссылка 2</a></li>
+              <li><a class="dropdown-link" href="#">Ссылка 3</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="container-materials"><%= render partial: 'articles/list_of_articles'%></div>
+      </div>
+        <% if current_user and is_editor%>
+          <form action="/cms/cms_page">
+            <p><input type="submit" class = "button" value="CMS" /></p>
+          </form>
+        <% end %>
+      </div>
+    </main>
   </div>
 </div>
