@@ -1,8 +1,9 @@
 <div>
   <div class="columns">
-    <main>
+    <header>
       <div class="nav-bar">
         <div class="container-logo"><img src="/img/dashboard-logo.svg" class="sp-logo" alt=""></div>
+        <main>
         <div class="username"><p class="user"><%= current_user.login %></p></div>
         <nav>
           <ul class="container-nav-points">
@@ -20,6 +21,8 @@
           <p><input type="submit" class = "log-out" value="Выход" /></p>
         </form>
       </div>
+    </header>
+    <main>
       <div class="content">
         <div class="container-filters">
           <div class="dropdown">
@@ -40,5 +43,6 @@
         <% end %>
       </div>
     </main>
+    <footer></footer>
   </div>
 </div>
