@@ -1,8 +1,37 @@
-/* Колонки */
-
-.content {
+.articlestable {
     display: block;
-    margin-left: 240px;
+    width: 100%;
+    appearance: none;
+}
+
+tbody {
+    display: block;
+    width: 100%;
+}
+tr, td {
+    display: block;
+    width: 100%;
+}
+
+.container-materials {
+    display: block;
+    width: 100%;
+}
+
+.material-text {
+    display: block;
+    width: 100%;
+    padding: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #212521;
+    background-color: white;
+    border-bottom: 1px solid #EAEFF8;
+}
+
+.material-text:hover {
+    background-color: #0D6EFD;
+    color: white;
 }
 
 /* Навигация */
@@ -154,66 +183,6 @@
     color: white;
 }
 
-/* Кнопки */
-
-.log-out {
-    display: flex;
-    position: absolute;
-    left: 5%;
-    bottom: 20px;
-    width: 90%;
-    height: 40px;
-    padding: 13px 0px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    background-color: #0D6EFD;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 600;
-    transition: 100ms ease-out;
-}
-.log-out:hover {
-    background-color: #013F9A;
-}
-
-/* Контейнеры */
-
-.container-filters {
-    display: block;
-    width: 100%;
-    height: 90px;
-    background-color: #EAEFF8;
-}
-
-.sp-logo {
-    position: absolute;
-    top: 20px;
-    bottom: 20px;
-    left: 20px;
-}
-
-.username {
-    display: block;
-    width: 100%;
-    margin-top: 20px;
-    padding: 5% 5%;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-.user {
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 100%;
-}
-
 /* Выпадающее меню */
 
 .dropdown {
@@ -224,6 +193,9 @@
     display: inline-block;
     font-weight: 600;
     font-size: 16px;
+    background-color: none;
+    appearance: none;
+    border: none;
 }
 .dropdown-btn::after {
     content: '';
@@ -294,3 +266,5 @@ a {
 .current {
     color:#0D6EFD;
 }
+
+

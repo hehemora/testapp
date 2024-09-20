@@ -1,0 +1,66 @@
+*, body {
+    box-sizing: border-box;
+}
+* {padding:0;margin:0}
+
+* {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* Шрифты */
+
+p {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.headline {
+    display: block;
+    margin-top: 38px;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+}
+
+.headline-h2 {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+/* Кнопки */
+
+.log-out {
+    display: flex;
+    position: absolute;
+    left: 5%;
+    bottom: 20px;
+    width: 90%;
+    height: 40px;
+    padding: 13px 0px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: #0D6EFD;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 100ms ease-out;
+}
+.log-out:hover {
+    background-color: #013F9A;
+}
