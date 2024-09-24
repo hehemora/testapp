@@ -1,7 +1,7 @@
 <table class = "articlestable">
   <% @articles.each do |article| %>
     <% if ArticleStatus.find_by(id: article.article_statuses_id).status == "ready" %>
-      <tr><td><a href="/articles/<%= article.id %>" class="material-text"><%= article.title %></td></tr></a>
+      <tr><td><a href="/articles/<%= article.id %>" class="material-text"><%= article.title %></a></td></tr>
     <% end %>
   <% end %>
 </table>
