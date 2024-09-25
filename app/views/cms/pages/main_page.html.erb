@@ -1,6 +1,7 @@
 <header></header>
 <main>
   <div class="columns">
+
     <div class="nav-bar">
       <div class="container-logo"><img src="/img/dashboard-logo.svg" class="sp-logo" alt=""></div>
       <div class="username"><p class="user"><%= current_user.login %></p></div>
@@ -15,24 +16,38 @@
           <li class="nav-point"><a href="#" class="point-txt settings">Настройки</a></li>
         </ul>
       </nav>
-      <%= current_user.login %>
-      <form action="/quit">
-        <p><input type="submit" class = "log-out" value="Выход" /></p>
-      </form>
+      <button class="log-out" id="modal-open-btn">Выход</button>
     </div>
+
     <div class="content">
       <div class="container-filters">
         <div class="dropdown">
           <button class="dropdown-btn">Список</button>
           <ul class="dropdown-content disp">
-            <li><a class="dropdown-link" href="#">Ссылка 1</a></li>
-            <li><a class="dropdown-link" href="#">Ссылка 2</a></li>
-            <li><a class="dropdown-link" href="#">Ссылка 3</a></li>
+            <li class="dropdown-link" id="materials-btn">Ссылка 1</li>
+            <li class="dropdown-link" id="materials-btn">Ссылка 2</li>
+            <li class="dropdown-link" id="materials-btn">Ссылка 3</li>
           </ul>
         </div>
       </div>
       <div class="container-materials"><%= render partial: 'articles/list_of_articles'%></div>
     </div>
+
+    <div class="modal" id="modal-window">
+      <div class="modal-box">
+        <p class="modal-txt">Вы действительно хотите выйти?</p>
+        <form action="/quit">
+          <p><input type="submit" value="Выход" class="logout-btn" /></p>
+        </form>
+        <button class="close-btn" id="close-modal-btn">Отмена</button>
+      </div>
+    </div>
+
+    <div class="materials" id="materials-list">
+      <button class="ml-button-close" id="materials-close"><img src='/icons/icon-close.svg' class="close-icon"></button>
+      <%= render partial: 'articles/list_of_articles'%>
+    </div>
+
     <% if current_user and is_editor%>
       <form action="/cms/cms_page">
         <p><input type="submit" class = "button" value="CMS" /></p>

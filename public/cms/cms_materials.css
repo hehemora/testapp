@@ -267,4 +267,41 @@ a {
     color:#0D6EFD;
 }
 
+/* Выезжающий список материалов */
 
+.materials {
+    position: fixed;
+    display: block;
+    background-color: white;
+    max-width: 1000px;
+    height: 100vh;
+    z-index: 99998;
+    top: 0;
+    right: 0;
+    box-shadow: -15px 0px 19px -2px rgba(34, 60, 80, 0.23);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.materials.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.ml-button-close {
+    display: block;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+    background-color: white;
+    color: white;
+    border-radius: 5px;
+}
+
+.materials-search {
+    display: block;
+    margin: 20px;
+    background-color: #EAEFF8;
+    padding: 5px;
+    border-radius: 5px;
+}
