@@ -242,11 +242,12 @@ tr, td {
     font-weight: 500;
     box-shadow: 5px #212529;
     appearance: none;
-    z-index: 99998;
+    z-index: none;
     box-shadow: 0px 0px 10px 0px rgba(33, 37, 33, 0.20);
     border-radius: 5%;
     visibility: hidden;
     opacity: 0;
+    display: none;
 }
 li {
     list-style-type: none;
@@ -256,12 +257,14 @@ li {
     text-decoration: none;
     padding: 10px;
     color: #212529;
+    cursor: pointer;
 }
 .dropdown-link:hover {
     background-color: #212529;
     color: white;
 }
 .disp {
+    display: block;
     visibility: visible;
     opacity: 1;
 }
@@ -288,10 +291,7 @@ li {
     background-color: #0C53BB;
 
 }
-a {
-    text-decoration: none;
-    color: #9AA8B7;
-}
+
 .current {
     color:#0D6EFD;
 }
@@ -344,19 +344,29 @@ a {
     width: 100%;
     padding: 20px;
     border-bottom: 1px solid #EAEFF8;
+    cursor: pointer;
+    box-sizing: border-box;
 }
 
 .article-tr:hover {
     background-color: #0D6EFD;
     color: white;
+
+    &:hover {
+        .article-txt, .article-status {
+            color: white;
+        }
+    }
 }
 
 .article-txt {
     display: block;
+    width: 100%;
     font-weight: 600;
     font-size: 16px;
     margin-bottom: 10px;
 }
+
 
 .article-status {
     display: block;
@@ -395,61 +405,6 @@ a {
 
 .cms-btn:hover {
     background-color: #0C53BB;
-}
-
-.cms-dropdown {
-    display: block;
-    position: absolute;
-    top: 15px;
-    left: 20px;
-}
-
-.cms-dropdown-btn {
-    display: block;
-    height: 40px;
-    width: 100%;
-    padding-right: 20px;
-    padding-left: 20px;
-    background-color: #212521;
     color: white;
-    font-weight: 500;
-    font-size: 14px;
-    border-radius: 5px;
-    transition: 100ms ease-in;
-    z-index: 9998;
 }
 
-.cms-ul {
-    display: block;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 5px;
-    background-color: white;
-    z-index: 99998;
-    border-radius: 5px;
-    box-shadow: 0px 0px 15px 0px rgba(34, 60, 80, 0.2);
-    visibility: hidden;
-    opacity: 0;
-}
-
-.cms-li {
-    display: block;
-    padding: 5px 10px 5px 10px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.cms-li:hover {
-    color: white;
-    background-color: #212521;
-}
-
-.cms-ul.open {
-    visibility: visible;
-    opacity: 1;
-}
-
-.dropdown-img {
-    display: inline-block;
-}

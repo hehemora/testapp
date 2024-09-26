@@ -1,6 +1,6 @@
 <table class = "articlestable">
   <% @articles.each do |article| %>
-    <tr class="article-tr"><td><a class="article-txt" href="/cms/articles/<%= article.id %>"><%= article.title %></td></a>
+    <tr class="article-tr"><td><a class="article-txt" href="/cms/articles/<%= article.id %>"><%= article.title %></a>
     <td class="article-status"><% if ArticleStatus.find_by(id: article.article_statuses_id).status == "draft" %>
     Черновик
     <% else %>
