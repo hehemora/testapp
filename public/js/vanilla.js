@@ -42,5 +42,5 @@ materialsBtn.addEventListener('click', () => {
 });
 
 document.getElementById("materials-close").addEventListener('click', function() {
-    document.getElementById("materials-list").classList.remove("open")
+    document.getElementById("materials-list").classList.remove('open')
 });

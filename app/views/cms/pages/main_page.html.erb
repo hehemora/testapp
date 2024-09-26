@@ -22,19 +22,18 @@
       <button class="log-out" id="modal-open-btn">Выход</button>
     </div>
     <div class="content">
-        <div class="container-filters">
-        <div class="dropdown">
-          <button class="dropdown-btn">Список</button>
-          <ul class="dropdown-content disp">
-            <li class="dropdown-link">Ссылка 1</li>
-            <li class="dropdown-link">Ссылка 2</li>
-            <li class="dropdown-link">Ссылка 3</li>
-          </ul>
-        </div>
-
+      <div class="container-filters">
+      <div class="dropdown">
+        <button class="dropdown-btn">Список</button>
+        <ul class="dropdown-content disp">
+          <li class="dropdown-link">Ссылка 1</li>
+          <li class="dropdown-link">Ссылка 2</li>
+          <li class="dropdown-link">Ссылка 3</li>
+        </ul>
       </div>
-      <div class="container-materials"><%= render partial: 'articles/list_of_articles'%></div>
     </div>
+
+    <div class="container-materials"><%= render partial: 'articles/list_of_articles'%></div></div>
 
     <div class="modal" id="modal-window">
       <div class="modal-box">

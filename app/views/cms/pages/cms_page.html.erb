@@ -1,23 +1,63 @@
-<% if current_user %>
-    <h1>Добро пожаловать, <%= current_user.login %></h1>
-    <%= render partial: 'cms/articles/secured_list_of_articles'%>
-      <% if current_user and is_editor %>
-        <form action="/cms/articles/new">
-          <p>
-            <input type="submit" class = "button" value="Добавить статью" />
-          </p>
-        </form>
-        <form action="/cms/users">
-          <p>
-            <input type="submit" class = "button" value="Добавить редактора" />
-          </p>
-        </form>
+<header></header>
+<main>
+  <div class="columns">
+    <div class="nav-bar">
+      <div class="container-logo"><img src="/img/dashboard-logo.svg" class="sp-logo" alt=""></div>
+      <div class="username"><p class="user"><%= current_user.login %></p></div>
+      <nav>
+        <ul class="container-nav-points">
+          <li class="nav-point" id="materials-btn"><a  class="point-txt publications">Публикация</a></li>
+          <li class="nav-point"><a class="point-txt programms">Программы</a></li>
+          <li class="nav-point"><a class="point-txt multimedia">Мультимедиа</a></li>
+          <li class="nav-point"><a class="point-txt users">Пользователи</a></li>
+          <li class="nav-point"><a class="point-txt help">Обратная связь</a></li>
+          <li class="nav-point"><a class="point-txt settings">Настройки</a></li>
+        </ul>
+      </nav>
+      <button class="log-out" id="modal-open-btn">Выход</button>
+    </div>
+    <div class="content">
+      <div class="cms-menu">
+        <div class="dropdown">
+          <button class="dropdown-btn">Список</button>
+          <ul class="dropdown-content disp">
+            <li class="dropdown-link">Ссылка 1</li>
+            <li class="dropdown-link">Ссылка 2</li>
+            <li class="dropdown-link">Ссылка 3</li>
+          </ul>
+        </div>
+        <div class="cms-buttons">
+          <form action="/cms/articles/new">
+            <p><input type="submit" class = "cms-btn" value="Добавить статью" /></p>
+          </form>
+          <form action="/cms/users">
+            <p><input type="submit" class = "cms-btn" value="Добавить редактора" /></p>
+          </form>
+            <form action="/quit">
+            <p><input type="submit" class = "cms-btn" value="Выход" /></p>
+          </form>
+        </div>
+      </div>
+      <% if current_user %>
+        <%= render partial: 'cms/articles/secured_list_of_articles'%>
       <% end %>
-      <form action="/quit">
-        <p>
-          <input type="submit" class = "button" value="Выход" />
-        </p>
-      </form>
-<% else %>
-  <h1>Уээээ</h1>
-<% end %>
+
+      <div class="modal" id="modal-window">
+        <div class="modal-box">
+          <button class="modal-close-btn" id="modal-close"><img src='/icons/icon-close.svg' class="close-icon"></button>
+          <p class="modal-txt">Вы действительно хотите выйти?</p>
+          <form action="/quit">
+            <p><input type="submit" value="Выход" class="logout-btn" /></p>
+          </form>
+          <button class="close-btn" id="close-modal-btn">Отмена</button>
+        </div>
+      </div>
+
+      <div class="materials" id="materials-list">
+        <button class="ml-button-close" id="materials-close"><img src='/icons/icon-close.svg' class="close-icon"></button>
+        <%= render partial: 'articles/list_of_articles'%>
+      </div>
+
+    </div>
+  </div>
+</main>
