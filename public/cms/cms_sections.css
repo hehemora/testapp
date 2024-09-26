@@ -8,7 +8,7 @@
 /* Контейнеры */
 
 .container-filters {
-    display: block;
+    display: inline-block;
     width: 100%;
     height: 90px;
     background-color: #EAEFF8;

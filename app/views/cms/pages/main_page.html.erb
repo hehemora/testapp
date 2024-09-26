@@ -1,7 +1,6 @@
 <header></header>
 <main>
   <div class="columns">
-
     <div class="nav-bar">
       <div class="container-logo"><img src="/img/dashboard-logo.svg" class="sp-logo" alt=""></div>
       <div class="username"><p class="user"><%= current_user.login %></p></div>
@@ -15,11 +14,15 @@
           <li class="nav-point"><a class="point-txt settings">Настройки</a></li>
         </ul>
       </nav>
+      <% if current_user and is_editor%>
+        <form action="/cms/cms_page">
+          <button class="cms-button" type="submit">CMS</button>
+        </form>
+      <% end %>
       <button class="log-out" id="modal-open-btn">Выход</button>
     </div>
-
     <div class="content">
-      <div class="container-filters">
+        <div class="container-filters">
         <div class="dropdown">
           <button class="dropdown-btn">Список</button>
           <ul class="dropdown-content disp">
@@ -28,6 +31,7 @@
             <li class="dropdown-link">Ссылка 3</li>
           </ul>
         </div>
+
       </div>
       <div class="container-materials"><%= render partial: 'articles/list_of_articles'%></div>
     </div>
@@ -47,12 +51,6 @@
       <button class="ml-button-close" id="materials-close"><img src='/icons/icon-close.svg' class="close-icon"></button>
       <%= render partial: 'articles/list_of_articles'%>
     </div>
-
-    <% if current_user and is_editor%>
-      <form action="/cms/cms_page">
-        <p><input type="submit" class = "button" value="CMS" /></p>
-      </form>
-    <% end %>
   </div>
 </main>
 <footer></footer>

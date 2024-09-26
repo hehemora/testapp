@@ -87,6 +87,25 @@ tr, td {
     cursor: pointer;
 }
 
+.cms-button {
+    position: absolute;
+    display: block;
+    height: 40px;
+    left: 5%;
+    bottom: 70px;
+    width: 90%;
+    padding: 10px;
+    background-color: #008000;
+    color: white;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.cms-button:hover {
+    background-color: #0d7307;
+}
+
 .p-nav-point {
     font-size: 14px;
     width: 196px;
