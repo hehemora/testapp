@@ -68,6 +68,7 @@ tr, td {
     text-decoration: none;
     border-radius: 5px;
     transition: 100ms ease-out;
+    cursor: pointer;
 }
 .nav-point:hover {
     background-color: #0D6EFD;
@@ -83,6 +84,7 @@ tr, td {
     line-height: 20px;
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
 
 .p-nav-point {
@@ -277,15 +279,17 @@ a {
     height: 100vh;
     z-index: 99998;
     top: 0;
-    right: 0;
+    right: -500px;
     box-shadow: -15px 0px 19px -2px rgba(34, 60, 80, 0.23);
     visibility: hidden;
     opacity: 0;
+    transition: 300ms ease-out;
 }
 
 .materials.open {
     visibility: visible;
     opacity: 1;
+    right: 0;
 }
 
 .ml-button-close {

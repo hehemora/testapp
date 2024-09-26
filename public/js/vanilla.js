@@ -22,12 +22,25 @@ document.getElementById("close-modal-btn").addEventListener("click", function() 
     document.getElementById("modal-window").classList.remove("open")
 });
 
-/* Отобразить всплывающее меню */
-document.getElementById("materials-btn").addEventListener("click", function() {
-    document.getElementById("materials-list").classList.add("open")
+document.getElementById("modal-close").addEventListener("click", function(){
+    document.getElementById("modal-window").classList.remove("open")
 });
 
-/* Скрыть всплывающее меню */
-document.getElementById("materials-close").addEventListener("click", function() {
+
+/* Список материалов */
+
+const materialsBtn = document.getElementById("materials-btn")
+const materials = document.getElementById("materials-list")
+
+materialsBtn.addEventListener('click', () => {
+    if (materials.classList.contains('open') == true) {
+        materials.classList.remove('open');
+    }
+    else {
+        materials.classList.add('open')
+    }
+});
+
+document.getElementById("materials-close").addEventListener('click', function() {
     document.getElementById("materials-list").classList.remove("open")
 });
