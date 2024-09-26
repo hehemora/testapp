@@ -12,6 +12,16 @@
 	vertical-align: baseline;
 }
 
+a {
+    cursor: pointer;
+}
+button {
+    cursor: pointer;
+}
+input {
+    cursor: pointer;
+}
+
 /* Шрифты */
 
 p {
