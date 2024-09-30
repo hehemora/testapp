@@ -1,25 +1,70 @@
-<h1>Новая статья</h1>
-<%= form_with model: @article, url: cms_articles_path do |f| %>
-  <div>
-      <% if @article.errors.any?%>
-      <div class=”alert alert-danger”>
-          <% @article.errors.full_messages.each do |message| %>
-          <div><%= message %></div>
-          <% end %>
-      </div>
-    <% end %>
+<header></header>
+<main>
+  <div class="columns">
+    <div class="nav-bar">
+      <div class="container-logo"><img src="/img/dashboard-logo.svg" class="sp-logo" alt=""></div>
+      <div class="username"><p class="user"><%= current_user.login %></p></div>
+      <nav>
+        <ul class="container-nav-points">
+          <li class="nav-point" id="materials-btn"><a  class="point-txt publications">Публикация</a></li>
+          <li class="nav-point"><a class="point-txt programms">Программы</a></li>
+          <li class="nav-point"><a class="point-txt multimedia">Мультимедиа</a></li>
+          <li class="nav-point"><a class="point-txt users">Пользователи</a></li>
+          <li class="nav-point"><a class="point-txt help">Обратная связь</a></li>
+          <li class="nav-point"><a class="point-txt settings">Настройки</a></li>
+        </ul>
+      </nav>
+      <button class="log-out" id="modal-open-btn">Выход</button>
     </div>
-  <div class = "mb-3">
-    <label> Заголовок </label><br>
-    <input type="text", name="article[title]", value="<%= @article.title %>", class="articletitle"/>
+    <div class="content">
+
+      <div class="cms-menu">
+        <div class="dropdown">
+          <button class="dropdown-btn">Список</button>
+          <ul class="dropdown-content">
+            <li class="dropdown-link">Ссылка 1</li>
+            <li class="dropdown-link">Ссылка 2</li>
+            <li class="dropdown-link">Ссылка 3</li>
+          </ul>
+        </div>
+      </div>
+
+      <h1 class="new-material-h1">Новая статья</h1>
+      <%= form_with model: @article, url: cms_articles_path do |f| %>
+        <div>
+            <% if @article.errors.any?%>
+            <div class=”alert alert-danger”>
+                <% @article.errors.full_messages.each do |message| %>
+                <div><%= message %></div>
+                <% end %>
+            </div>
+          <% end %>
+          </div>
+        <div class = "material-headline">
+          <label class="ah-txt"> Заголовок </label>
+          <input type="text", name="article[title]", value="<%= @article.title %>", class="article-headline"/>
+        </div>
+        <div class = "material-headline">
+          <label class="ah-txt"> Текст статьи </label>
+          <textarea type="text", name="article[body]" class="article-text">
+          <%= @article.body %>
+          </textarea>
+          <input type="submit", class="nm-btn", value="Сохранить статью" />
+        </div>
+      <% end %>
+
+      <div class="modal" id="modal-window">
+        <div class="modal-box">
+          <button class="modal-close-btn" id="modal-close"><img src='/icons/icon-close.svg' class="close-icon"></button>
+          <p class="modal-txt">Вы действительно хотите выйти?</p>
+          <form action="/quit">
+            <input type="submit" value="Выход" class="logout-btn" />
+          </form>
+          <button class="close-btn" id="close-modal-btn">Отмена</button>
+        </div>
+      </div>
+    </div>
+    
   </div>
-  <div class = "mb-3">
-    <label> Текст статьи </label><br>
-    <textarea type="text", name="article[body]" class="articlebody">
-    <%= @article.body %>
-    </textarea>
-  </div>
-  <p>
-    <input type="submit", class="button", value="Сохранить статью" />
-  </p>
-<% end %>
+</main>
+<footer></footer>

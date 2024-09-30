@@ -1,42 +1,92 @@
-<%= form_with model: @article, url: cms_article_path(@article.id), method: "patch" do |f| %>
-  <div>
-  <%= csrf_meta_tags %>
-      <% if @article.errors.any?%>
-      <div class=”alert alert-danger”>
-          <% @article.errors.full_messages.each do |message| %>
-          <div><%= message %></div>
-          <% end %>
+<header></header>
+<main>
+  <div class="columns">
+
+    <div class="nav-bar">
+      <div class="container-logo"><img src="/img/dashboard-logo.svg" class="sp-logo" alt=""></div>
+      <div class="username"><p class="user"><%= current_user.login %></p></div>
+      <nav>
+        <ul class="container-nav-points">
+          <li class="nav-point" id="materials-btn"><a  class="point-txt publications">Публикация</a></li>
+          <li class="nav-point"><a class="point-txt programms">Программы</a></li>
+          <li class="nav-point"><a class="point-txt multimedia">Мультимедиа</a></li>
+          <li class="nav-point"><a class="point-txt users">Пользователи</a></li>
+          <li class="nav-point"><a class="point-txt help">Обратная связь</a></li>
+          <li class="nav-point"><a class="point-txt settings">Настройки</a></li>
+        </ul>
+      </nav>
+      <button class="log-out" id="modal-open-btn">Выход</button>
+    </div>
+
+    <div class="content">
+      <div class="cms-menu">
+        <div class="dropdown">
+          <button class="dropdown-btn">Список</button>
+          <ul class="dropdown-content">
+            <li class="dropdown-link">Ссылка 1</li>
+            <li class="dropdown-link">Ссылка 2</li>
+            <li class="dropdown-link">Ссылка 3</li>
+          </ul>
+        </div>
       </div>
+      <%= form_with model: @article, url: cms_article_path(@article.id), method: "patch" do |f| %>
+        <%= csrf_meta_tags %>
+            <% if @article.errors.any?%>
+            <div class=”alert alert-danger”>
+                <% @article.errors.full_messages.each do |message| %>
+                <div><%= message %></div>
+                <% end %>
+            </div>
+            <% end %>
+        <% if ArticleStatus.find_by(id: @article.article_statuses_id).status == "draft" %>
+          <div class = "material-headline">
+            <label class="ah-txt">Статус: Черновик</label>
+            <label class="ah-txt">Заголовок</label>
+            <input type="text", name="article[title]", value="<%= @article.title %>", class="article-headline"/>
+          </div>
+
+          <div class = "material-headline">
+            <label class="ah-txt">Текст статьи</label>
+            <textarea type="text", name="article[body]" class="article-text">
+            <%= @article.body %>
+            </textarea>
+            <input type="submit", class="nm-btn", value="Сохранить изменения" />
+          </div>
+
+        <% else %>
+          <div class = "material-headline">
+            <label class="ah-txt">Статус: Опубликовано</label>
+            <input type="text", name="article[title]", value="<%= @article.title %>", class="article-headline", readonly="true" />
+          </div>
+          <div class ="material-headline">
+            <label class="ah-txt"> Текст статьи </label>
+            <textarea type="text", name="article[body]" class="article-text", readonly="true">
+            <%= @article.body %>
+            </textarea>
+          </div>
+        <% end %>
       <% end %>
-  <% if ArticleStatus.find_by(id: @article.article_statuses_id).status == "draft" %>
-    <div class = "mb-3">
-      Статус статьи: Черновик <br>
-      <label> Заголовок </label><br>
-      <input type="text", name="article[title]", value="<%= @article.title %>", class="articletitle"/><br>
-      <label> Текст статьи </label><br>
-      <textarea type="text", name="article[body]" class="articlebody">
-      <%= @article.body %>
-      </textarea>
-      <p>
-        <input type="submit", class="button", value="Сохранить изменения" />
-      </p>
+      <div class="article-all-buttons">
+        <% if ArticleStatus.find_by(id: @article.article_statuses_id).status == "draft" %>
+          <%= render partial: 'cms/articles/delete_article_button'%>
+          <%= render partial: 'cms/articles/publish_article_button'%>
+        <% else %>
+          <%= render partial: 'cms/articles/delete_article_button'%>
+        <% end %>
+      </div>
+
+      <div class="modal" id="modal-window">
+        <div class="modal-box">
+          <button class="modal-close-btn" id="modal-close"><img src='/icons/icon-close.svg' class="close-icon"></button>
+          <p class="modal-txt">Вы действительно хотите выйти?</p>
+          <form action="/quit">
+            <input type="submit" value="Выход" class="logout-btn" />
+          </form>
+          <button class="close-btn" id="close-modal-btn">Отмена</button>
+        </div>
+      </div>
 
     </div>
-  <% else %>
-    <div class = "mb-3">
-      Статус статьи: Опубликовано <br>
-      <input type="text", name="article[title]", value="<%= @article.title %>", class="articletitle", readonly="true" /><br>
-      <label> Текст статьи </label><br>
-      <textarea type="text", name="article[body]" class="articlebody", readonly="true">
-      <%= @article.body %>
-      </textarea>
-    </div>
-  <% end %>
-</div>
-<% end %>
-<% if ArticleStatus.find_by(id: @article.article_statuses_id).status == "draft" %>
-  <%= render partial: 'cms/articles/delete_article_button'%>
-  <%= render partial: 'cms/articles/publish_article_button'%>
-<% else %>
-  <%= render partial: 'cms/articles/delete_article_button'%>
-<% end %>
+  </div>
+</main>
+<footer></footer>

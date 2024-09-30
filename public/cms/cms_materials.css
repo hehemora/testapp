@@ -408,3 +408,92 @@ li {
     color: white;
 }
 
+/* Добавление материала */
+
+.new-material-h1 {
+    display: block;
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.material-headline {
+    display: block;
+    width: 100%;
+    margin: 30px;
+}
+
+.article-headline {
+    display: block;
+    background-color: white;
+    width: 50vw;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    border: 2px solid #EAEFF8;
+    border-radius: 5px;
+}
+
+.article-headline:hover {
+    border: 2px solid #212521;
+}
+
+.article-text {
+    display: block;
+    background-color: white;
+    width: 50vw;
+    height: 300px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    border: 2px solid #EAEFF8;
+    border-radius: 5px;
+}
+
+.ah-txt {
+    display: block;
+    font-size: 18px;
+    width: 100%;
+    font-weight: 500;
+    margin-bottom: 15px
+}
+
+.nm-btn {
+    display: inline-block;
+    padding: 15px;
+    margin-top: 20px;
+    margin-right: 10px;
+    background-color: #0D6EFD;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.nm-btn.delete {
+    background-color: #FF0000;
+}
+
+.nm-btn.delete:hover {
+    background-color: #A60000;
+}
+
+.nm-btn.public {
+    background-color: #0d7307;
+}
+
+.nm-btn.public:hover {
+    background-color: #008000;
+}
+
+.nm-btn:hover {
+    background-color: #0C53BB;
+}
+
+.article-all-buttons {
+    display: flex;
+    margin-top: 80px;
+    margin-left: 30px;
+}
