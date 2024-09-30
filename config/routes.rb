@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  root "pages#login_page"
+  root "pages#blank_page"
 
   get "/main_page", to: "pages#main_page"
   get "/cms/cms_page", to: "cms/pages#cms_page"
+  # get "/cms/login_page", to: "cms/pages#login_page"
   
   resources :users
   namespace :cms do
@@ -31,6 +32,7 @@ Rails.application.routes.draw do
   namespace :cms do
     resources :pages do
       get :main_page, on: :collection
+      get :login_page, on: :collection
     end
   end
 
