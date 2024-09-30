@@ -419,14 +419,13 @@ li {
 
 .material-headline {
     display: block;
-    width: 100%;
     margin: 30px;
 }
 
 .article-headline {
     display: block;
     background-color: white;
-    width: 50vw;
+    width: 50%;
     padding-top: 10px;
     padding-left: 15px;
     padding-right: 15px;
@@ -442,7 +441,7 @@ li {
 .article-text {
     display: block;
     background-color: white;
-    width: 50vw;
+    width: 50%;
     height: 300px;
     padding-top: 10px;
     padding-left: 15px;
@@ -493,7 +492,7 @@ li {
 }
 
 .article-all-buttons {
-    display: flex;
+    display: block;
     margin-top: 80px;
     margin-left: 30px;
 }
@@ -505,9 +504,14 @@ li {
     border-bottom: 1px solid #EAEFF8;
     font-size: 16px;
     font-weight: 600;
+    cursor: default;
 }
 
 .article-link:hover {
     background-color: #0D6EFD;
     color: white;
+}
+
+textarea {
+    appearance: none;
 }
