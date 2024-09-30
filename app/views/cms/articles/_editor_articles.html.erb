@@ -7,7 +7,7 @@
       <div class="username"><p class="user"><%= current_user.login %></p></div>
       <nav>
         <ul class="container-nav-points">
-          <li class="nav-point" id="materials-btn"><a  class="point-txt publications">Публикация</a></li>
+          <li class="nav-point" id="materials-btn"><a class="point-txt publications">Публикация</a></li>
           <li class="nav-point"><a class="point-txt programms">Программы</a></li>
           <li class="nav-point"><a class="point-txt multimedia">Мультимедиа</a></li>
           <li class="nav-point"><a class="point-txt users">Пользователи</a></li>
@@ -21,8 +21,8 @@
     <div class="content">
       <div class="cms-menu">
         <div class="dropdown">
-          <button class="dropdown-btn">Список</button>
-          <ul class="dropdown-content">
+          <button class="dropdown-btn" id="dropdown-btn">Список</button>
+          <ul class="dropdown-content" id="dropdown-menu">
             <li class="dropdown-link">Ссылка 1</li>
             <li class="dropdown-link">Ссылка 2</li>
             <li class="dropdown-link">Ссылка 3</li>
@@ -84,6 +84,19 @@
           </form>
           <button class="close-btn" id="close-modal-btn">Отмена</button>
         </div>
+      </div>
+
+      <div class="materials" id="materials-list">
+        <button class="ml-button-close" id="materials-close"><img src='/icons/icon-close.svg' class="close-icon"></button>
+        <table class="articlestable">
+          <tr class="articles-tr">
+            <td class="article-td"><a class="article-link">Новость - 1</a></td>
+            <td class="article-td"><a class="article-link">Новость - 2</a></td>
+            <td class="article-td"><a class="article-link">Новость - 3</a></td>
+            <td class="article-td"><a class="article-link">Новость - 4</a></td>
+            <td class="article-td"><a class="article-link">Новость - 5</a></td>
+          </tr>
+        </table>
       </div>
 
     </div>

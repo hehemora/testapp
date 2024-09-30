@@ -1,15 +1,10 @@
-/* Раскрывающийся список */
-
-let dropdown = document.querySelector('.dropdown-content');
-let dropdownBtn = document.querySelector('.dropdown-btn');
-
-dropdownBtn.addEventListener('click', () => {
-    if (dropdown.classList.contains("disp") == true) {
-        dropdown.classList.remove("disp");
+document.getElementById("dropdown-btn").addEventListener('click', function() {
+    if (document.getElementById("dropdown-menu").classList.contains("disp") == true) {
+        document.getElementById("dropdown-menu").classList.remove("disp")
     }
     else {
-        dropdown.classList.add("disp");
-    }
+        document.getElementById("dropdown-menu").classList.add("disp")
+    };
 });
 
 /* Отобразить модальное окно */
@@ -22,22 +17,15 @@ document.getElementById("close-modal-btn").addEventListener('click', function() 
     document.getElementById("modal-window").classList.remove("open")
 });
 
-document.getElementById("modal-close").addEventListener('click', function(){
+document.getElementById("modal-close").addEventListener('click', function() {
     document.getElementById("modal-window").classList.remove("open")
 });
 
-
-/* Список материалов */
-
-let materialsBtn = document.getElementById("materials-btn");
-let materials = document.getElementById("materials-list");
-
-materialsBtn.addEventListener('click', () => {
-    if (materials.classList.contains("open") == true) {
-        materials.classList.remove("open");
-    }
-    else {
-        materials.classList.add("open")
+document.getElementById("materials-btn").addEventListener('click', function() {
+    if (document.getElementById("materials-list").classList.contains("open") == true) {
+        document.getElementById("materials-list").classList.remove("open")
+    } else {
+        document.getElementById("materials-list").classList.add("open")
     }
 });
 
