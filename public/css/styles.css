@@ -3,6 +3,7 @@
 }
 * {padding:0;margin:0}
 
+
 /* Шрифты */
 p {
     font-size: 18px;
@@ -12,7 +13,7 @@ p {
 }
 
 body {
-    background-color: #F8F9FA;
+    background-color: white;
     box-sizing: border-box;
     font-family: 'Inter';
     color: #212529;

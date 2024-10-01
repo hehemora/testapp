@@ -12,6 +12,12 @@ body {
     font-family: 'Inter';
 }
 
+svg {
+	stroke: inherit;
+    stroke-width: inherit;
+    fill: inherit;
+}
+
 /* Навигация */
 
 .navigation {
@@ -42,7 +48,7 @@ body {
 .nav-links a {
 	display: block;
 	margin-right: 20px;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 500;
 }
 
@@ -60,12 +66,11 @@ body {
 	font-weight: 600;
 	border-radius: 5px;
 	transition: 300ms ease-out;
+	cursor: pointer;
 }
 
 .cms-log-btn:hover {
-	background-color: #212521;
-	border: 2px solid white;
-	color: white;
+	background-color: #FCEE0A;
 }
 
 .nav-logo {
@@ -77,61 +82,65 @@ body {
 /* Слайдер */
 
 .cover {
-	display: flex;
+	display: block;
 	position: relative;
 	overflow: hidden;
-	margin: 0 auto;
+	margin: auto;
 	margin-top: 100px;
 	width: 1280px;
-	height: 600px;
+	height: 380px;
 	border-radius: 10px;
+	margin-bottom: 150px;
+}
+
+h2 {
+	display: block;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 100%;
+	margin-bottom: 30px;
 }
 
 .cover-slider {
 	display: flex;
-	width: 5120px;
+	width: 2560px;
 	position: relative;
 	left: 0;
 	transition: 500ms ease-out;
+	gap: 10px;
 }
 
 .slider-point {
 	display: block;
 	position: relative;
-	width: 1280px;
-	height: 600px;
+	width: 420px;
+	height: 240px;
 	overflow: hidden;
+	border-radius: 10px;
 }
 
 
 .slider-point img {
 	display: block;
-}
-
-.slider-point h2 {
-	display: block;
-	position: absolute;
-	bottom: 20px;
-	left: 20px;
-	color: white;
-	font-size: 32px;
-	font-weight: 700;
-	line-height: 100%;
+	width: fit-content;
+	height: fit-content;
 }
 
 .slider-btns {
 	display: flex;
 	position: absolute;
-	bottom: 20px;
-	right: 20px;
+	bottom: 0;
+	right: 0;
 }
 
 .next-btn {
 	display: block;
-	background-color: white;
+	background-color: #212521;
 	text-align: center;
 	border-radius: 100%;
 	padding: 15px;
+	cursor: pointer;
+	transition: 300ms ease-out;
 }
 
 .next-btn img {
@@ -142,11 +151,13 @@ body {
 
 .prev-btn {
 	display: block;
-	background-color: white;
+	background-color: #212521;
 	text-align: center;
 	border-radius: 100%;
 	padding: 15px;
 	margin-right: 5px;
+	cursor: pointer;
+	transition: 300ms ease-out;
 }
 
 .prev-btn img {
@@ -155,3 +166,94 @@ body {
 	height: 20px;
 }
 
+.prev-btn:hover, .next-btn:hover {
+	background-color: #FCEE0A;
+}
+
+/* Новости */
+
+.news {
+	display: block;
+	position: relative;
+	margin: auto;
+	width: 1280px;
+	margin-bottom: 150px;
+	height: 430px;
+	overflow: hidden;
+}
+
+.list-news {
+	display: flex;
+	width: 2560px;
+	position: relative;
+	left: 0;
+	transition: 500ms ease-out;
+	gap: 10px;
+	border-radius: 10px;
+}
+
+.news-card {
+	display: block;
+	height: 340px;
+}
+
+
+.news-card img {
+	width: 420px;
+	height: 280px;
+	border-radius: 10px;
+}
+
+.news-card h3 {
+	display: block;
+	margin-top: 10px;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 100%;
+	width: 420px;
+}
+
+
+.news-btns {
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.news-prev-btn {
+	display: block;
+	background-color: #212521;
+	text-align: center;
+	border-radius: 100%;
+	padding: 15px;
+	margin-right: 5px;
+	cursor: pointer;
+	transition: 300ms ease-out;
+}
+
+.news-prev-btn img {
+	display: block;
+	width: 20px;
+	height: 20px;
+}
+
+.news-next-btn {
+	display: block;
+	background-color: #212521;
+	text-align: center;
+	border-radius: 100%;
+	padding: 15px;
+	cursor: pointer;
+	transition: 300ms ease-out;
+}
+
+.news-next-btn img {
+	display: block;
+	width: 20px;
+	height: 20px;
+}
+
+.news-prev-btn:hover, .news-next-btn:hover {
+	background-color: #FCEE0A;
+}
