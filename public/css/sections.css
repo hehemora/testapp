@@ -18,6 +18,10 @@ svg {
     fill: inherit;
 }
 
+ul li {
+	list-style: none;
+}
+
 /* Навигация */
 
 .navigation {
@@ -79,20 +83,6 @@ svg {
 	left: 0;
 }
 
-/* Слайдер */
-
-.cover {
-	display: block;
-	position: relative;
-	overflow: hidden;
-	margin: auto;
-	margin-top: 100px;
-	width: 1280px;
-	height: 380px;
-	border-radius: 10px;
-	margin-bottom: 150px;
-}
-
 h2 {
 	display: block;
 	font-size: 28px;
@@ -101,72 +91,66 @@ h2 {
 	margin-bottom: 30px;
 }
 
-.cover-slider {
-	display: flex;
-	width: 2560px;
-	position: relative;
-	left: 0;
-	transition: 500ms ease-out;
-	gap: 10px;
+.main-cover {
+	display: block;
+	width: 1280px;
+	margin: auto;
+	margin-top: 100px;
+	margin-bottom: 150px;
 }
 
-.slider-point {
+/* Кнопки слайдера */
+
+.btn-prev .btn-next {
 	display: block;
-	position: relative;
+}
+
+.card-list {
+	display: flex;
+	user-select: none;
+}
+
+.card-item {
+	display: block;
 	width: 420px;
-	height: 240px;
-	overflow: hidden;
+}
+
+.card-wrapper {
+	display: block;
+	width: 1280px;
+}
+
+.card-image {
 	border-radius: 10px;
 }
 
-
-.slider-point img {
-	display: block;
-	width: fit-content;
-	height: fit-content;
-}
-
-.slider-btns {
+.sw-prev, .sw-next {
 	display: flex;
 	position: absolute;
+	width: fit-content;
+	height: fit-content;
+	padding: 6px;
+	user-select: none;
+	color: #212521;
+	background-color: white;
+	top: 90px;
 	bottom: 0;
-	right: 0;
-}
-
-.next-btn {
-	display: block;
-	background-color: #212521;
-	text-align: center;
+	z-index: 2;
 	border-radius: 100%;
-	padding: 15px;
-	cursor: pointer;
-	transition: 300ms ease-out;
+	transition: 300ms ease;
+
 }
 
-.next-btn img {
-	display: block;
-	width: 20px;
-	height: 20px;
+.sw-prev {
+	transform: scaleX(-1);
+	left: 10px;
 }
 
-.prev-btn {
-	display: block;
-	background-color: #212521;
-	text-align: center;
-	border-radius: 100%;
-	padding: 15px;
-	margin-right: 5px;
-	cursor: pointer;
-	transition: 300ms ease-out;
+.sw-next {
+	right: 10px;
 }
 
-.prev-btn img {
-	display: block;
-	width: 20px;
-	height: 20px;
-}
-
-.prev-btn:hover, .next-btn:hover {
+.sw-next:hover, .sw-prev:hover {
 	background-color: #FCEE0A;
 }
 
@@ -174,86 +158,64 @@ h2 {
 
 .news {
 	display: block;
-	position: relative;
-	margin: auto;
 	width: 1280px;
-	margin-bottom: 150px;
-	height: 430px;
-	overflow: hidden;
+	margin: 0 auto;
 }
 
-.list-news {
-	display: flex;
-	width: 2560px;
-	position: relative;
-	left: 0;
-	transition: 500ms ease-out;
+.news-list {
+	display: block;
+	column-count: 3;
+	column-width: 420px;
 	gap: 10px;
-	border-radius: 10px;
 }
 
 .news-card {
-	display: block;
-	height: 340px;
-}
-
-
-.news-card img {
-	width: 420px;
-	height: 280px;
-	border-radius: 10px;
-}
-
-.news-card h3 {
-	display: block;
-	margin-top: 10px;
-	font-size: 16px;
-	font-weight: 600;
-	line-height: 100%;
-	width: 420px;
-}
-
-
-.news-btns {
 	display: flex;
-	position: absolute;
-	bottom: 0;
-	right: 0;
+	width: 420px;
+	margin-bottom: 15px;
+	border-radius: 10px;
+	transition: 300ms ease;
 }
 
-.news-prev-btn {
-	display: block;
-	background-color: #212521;
-	text-align: center;
-	border-radius: 100%;
-	padding: 15px;
-	margin-right: 5px;
-	cursor: pointer;
-	transition: 300ms ease-out;
-}
-
-.news-prev-btn img {
-	display: block;
-	width: 20px;
-	height: 20px;
-}
-
-.news-next-btn {
-	display: block;
-	background-color: #212521;
-	text-align: center;
-	border-radius: 100%;
-	padding: 15px;
-	cursor: pointer;
-	transition: 300ms ease-out;
-}
-
-.news-next-btn img {
-	display: block;
-	width: 20px;
-	height: 20px;
-}
-
-.news-prev-btn:hover, .news-next-btn:hover {
+.news-card:hover {
 	background-color: #FCEE0A;
+	color: #212521;
+
+	.news-data {
+		color: #212521;
+	}
+}
+
+.news-info {
+	display: block;
+	width: 270px;
+	margin-left: 15px;
+}
+
+
+.news-img {
+	display: block;
+	width: 120px;
+	height: 120px;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+.news-data {
+	display: block;
+	width: 100%;
+	font-size: 14px;
+	font-weight: 700;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	line-height: 100%;
+	color: #7A7A7A;
+}
+
+.news-headline {
+	display: block;
+	width: 100%;
+	line-height: 100%;
+	font-size: 16px;
+	font-weight: 700;
 }
