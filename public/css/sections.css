@@ -32,10 +32,15 @@ ul li {
 	color: white;
 }
 
+.container {
+	display: block;
+	width: 1280px;
+	margin: 0 auto;
+}
+
 .nav-bar {
 	display: flex;
-	width: 1280px;
-	height: inherit;
+	height: 70px;
 	margin: 0 auto;
 	position: relative;
 	align-items: center;
@@ -54,6 +59,7 @@ ul li {
 	margin-right: 20px;
 	font-size: 14px;
 	font-weight: 500;
+	cursor: default;
 }
 
 .cms-log-btn {
@@ -93,7 +99,6 @@ h2 {
 
 .main-cover {
 	display: block;
-	width: 1280px;
 	margin: auto;
 	margin-top: 100px;
 	margin-bottom: 150px;
@@ -158,8 +163,6 @@ h2 {
 
 .news {
 	display: block;
-	width: 1280px;
-	margin: 0 auto;
 }
 
 .news-list {
@@ -192,6 +195,10 @@ h2 {
 	margin-left: 15px;
 }
 
+.news-info a {
+	cursor: default;
+}
+
 
 .news-img {
 	display: block;
@@ -218,4 +225,122 @@ h2 {
 	line-height: 100%;
 	font-size: 16px;
 	font-weight: 700;
+}
+
+/* О компании */
+
+.about {
+	display: flex;
+}
+
+.about-container {
+	margin-top: 150px;
+	display: block;
+}
+
+.about-txt {
+	display: block;
+	width: 420px;
+	margin-right: 110px;
+}
+
+.about-txt p {
+	display: block;
+	font-size: 16px;
+	line-height: normal;
+	font-weight: 600;
+}
+
+.about-playlists {
+	display: block;
+	width: 760px;
+}
+
+.playlist-card {
+	display: flex;
+	position: relative;
+	width: 760px;
+	height: 200px;
+	border: 2px solid #212521;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	transition: 300ms ease-out;
+}
+
+.playlist-card:hover {
+	background-color: #FCEE0A;
+	border: 2px solid #FCEE0A;
+}
+
+.playlist-img {
+	display: block;
+	width: 200px;
+	height: 170px;
+	padding: 15px;
+	border-radius: 20px;
+}
+
+.playlist-name {
+	display: block;
+	width: 485px;
+	height: fit-content;
+	margin-top: 30px;
+	margin-left: 15px;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	cursor: default;
+}
+
+.playlist-card button {
+	display: flex;
+	position: absolute;
+	width: fit-content;
+	height: fit-content;
+	padding: 10px;
+	left: 245px;
+	bottom: 30px;
+	color: white;
+	background-color: #212521;
+	border: 2px solid #212521;
+	border-radius: 5px;
+}
+
+.playlist-card p {
+	position: absolute;
+	width: 140px;
+	text-align: right;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 100%;
+	bottom: 30px;
+	right: 30px;
+}
+
+/* Footer */
+
+.main-footer {
+	display: block;
+	width: 100%;
+	background-color: #212521;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-top: 150px;
+}
+
+.footer {
+	display: flex;
+	width: 100%;
+	color: white;
+}
+
+.footer h4 {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: normal;
 }

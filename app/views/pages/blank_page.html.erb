@@ -1,114 +1,172 @@
 <style>
-    header {display:none}
-    footer {display:none}
+    .auth-header {display:none}
+    .auth-footer {display:none}
 </style>
 
-<div class="navigation">
-    <nav class="nav-bar">
-        <a class="nav-logo" href="/">
-            <img src="/icons/icon-radio-logo.svg">
-        </a>
-        <ul class="nav-links">
-            <li><a>О НАС</a></li>
-            <li><a>ПРОГРАММЫ</a></li>
-            <li><a>КОНТАКТЫ</a></li>
-        </ul>
-        <form action="/auth">
-            <button class="cms-log-btn" type="submit">Войти</button>
-        </form>
-    </nav>
-</div>
+<header class="navigation">
+    <div class="container">
+        <nav class="nav-bar">
+            <a class="nav-logo" href="/">
+                <img src="/icons/icon-radio-logo.svg">
+            </a>
+            <ul class="nav-links">
+                <li><a>О НАС</a></li>
+                <li><a>ПРОГРАММЫ</a></li>
+                <li><a>КОНТАКТЫ</a></li>
+            </ul>
+            <form action="/auth">
+                <button class="cms-log-btn" type="submit">Войти</button>
+            </form>
+        </nav>
+    </div>
+</header>
 
+<main>
+    <div class="container">
+        <div class="main-cover">
+            <h2>Анонсы</h2>
+            <div class="container swiper">
+                <div class="card-wrapper">
+                    <ul class="card-list swiper-wrapper">
+                        <li class="card-item swiper-slide">
+                            <a class="card-link">
+                                <img src="/img/pic-1.png" alt="Card Image" class="card-image">
+                            </a>
+                        </li>
+                        <li class="card-item swiper-slide">
+                            <a class="card-link">
+                                <img src="/img/pic-2.png" alt="Card Image" class="card-image">
+                            </a>
+                        </li>
+                        <li class="card-item swiper-slide">
+                            <a class="card-link">
+                                <img src="/img/pic-3.png" alt="Card Image" class="card-image">
+                            </a>
+                        </li>
+                        <li class="card-item swiper-slide">
+                            <a class="card-link">
+                                <img src="/img/pic-4.png" alt="Card Image" class="card-image">
+                            </a>
+                        </li>
+                        <li class="card-item swiper-slide">
+                            <a class="card-link">
+                                <img src="/img/pic-5.png" alt="Card Image" class="card-image">
+                            </a>
+                        </li>
+                        <li class="card-item swiper-slide">
+                            <a class="card-link">
+                                <img src="/img/pic-6.png" alt="Card Image" class="card-image">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="sw-prev selected-button-prev"><span class="material-symbols-outlined">arrow_forward</span></div>
+                    <div class="sw-next selected-button-next"><span class="material-symbols-outlined">arrow_forward</span></div>
+                </div>
+            </div>
+        </div>
 
-<div class="main-cover">
-    <h2>Анонсы</h2>
-    <div class="container swiper">
-        <div class="card-wrapper">
-            <ul class="card-list swiper-wrapper">
-                <li class="card-item swiper-slide">
-                    <a class="card-link">
-                        <img src="/img/pic-1.png" alt="Card Image" class="card-image">
+        <div class="news">
+            <h2>Новости</h2>
+            <ul class="news-list">
+                <li class="news-card">
+                    <a>
+                        <img src="/img/news-pic-1.png" class="news-img">
+                        <div class="news-info">
+                            <p class="news-data">2 октября</p>
+                            <a class="news-headline">Иконы рока. Как всё начиналось: Крис Корнел</a>
+                        </div>
                     </a>
                 </li>
-                <li class="card-item swiper-slide">
-                    <a class="card-link">
-                        <img src="/img/pic-2.png" alt="Card Image" class="card-image">
+                <li class="news-card">
+                    <a>
+                        <img src="/img/news-pic-2.png" class="news-img">
+                        <div class="news-info">
+                            <p class="news-data">23 сентября</p>
+                            <a class="news-headline">«Русская Медиагруппа» выступила инфопартнёром мачта Лиги легенд «Зенит» - ЦСКА</a>
+                        </div>
                     </a>
                 </li>
-                <li class="card-item swiper-slide">
-                    <a class="card-link">
-                        <img src="/img/pic-3.png" alt="Card Image" class="card-image">
+                <li class="news-card">
+                    <a>
+                        <img src="/img/news-pic-3.png" class="news-img">
+                        <div class="news-info">
+                            <p class="news-data">19 сентября</p>
+                            <a class="news-headline">Рок и автомобили: культовые машины рок-звезд</a>
+                        </div>
                     </a>
                 </li>
-                <li class="card-item swiper-slide">
-                    <a class="card-link">
-                        <img src="/img/pic-4.png" alt="Card Image" class="card-image">
+                <li class="news-card">
+                    <a>
+                        <img src="/img/news-pic-4.png" class="news-img">
+                        <div class="news-info">
+                            <p class="news-data">11 сентября</p>
+                            <a class="news-headline">21 сентября на «Moscow Raceway» состоится финал кольцевых автогонок суперкаров</a>
+                        </div>
                     </a>
                 </li>
-                <li class="card-item swiper-slide">
-                    <a class="card-link">
-                        <img src="/img/pic-5.png" alt="Card Image" class="card-image">
+                <li class="news-card">
+                    <a>
+                        <img src="/img/news-pic-5.png" class="news-img">
+                        <div class="news-info">
+                            <p class="news-data">8 сентября</p>
+                            <a class="news-headline">История одного хита: Highway to Hell (AC/DC)</a>
+                        </div>
                     </a>
                 </li>
-                <li class="card-item swiper-slide">
-                    <a class="card-link">
-                        <img src="/img/pic-6.png" alt="Card Image" class="card-image">
+                <li class="news-card">
+                    <a>
+                        <img src="/img/news-pic-6.png" class="news-img">
+                        <div class="news-info">
+                            <p class="news-data">1 сентября</p>
+                            <a class="news-headline">Рокеры, чья дружба проверена временем</a>
+                        </div>
                     </a>
                 </li>
             </ul>
-            <div class="sw-prev selected-button-prev"><span class="material-symbols-outlined">arrow_forward</span></div>
-            <div class="sw-next selected-button-next"><span class="material-symbols-outlined">arrow_forward</span></div>
+        </div>
+
+        <div class="about-container">
+            <h2>О компании</h2>
+            <div class="about">
+                <div class="about-txt"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
+                <ul class="about-playlists">
+                    <li class="playlist-card">
+                        <a>
+                            <img class="playlist-img" src="/img/playlist-1.png">
+                            <a class="playlist-name">MORRO ROCK</a>
+                            <button><span class="material-symbols-outlined">arrow_outward</span></button>
+                            <p>4h 36m</p>
+                        </a>
+                    </li>
+                    <li class="playlist-card">
+                        <a>
+                            <img class="playlist-img" src="/img/playlist-2.png">
+                            <a class="playlist-name">PACIFIC DREAMS</a>
+                            <button><span class="material-symbols-outlined">arrow_outward</span></button>
+                            <p>4h 36m</p>
+                        </a>
+                    </li>
+                    <li class="playlist-card">
+                        <a>
+                            <img class="playlist-img" src="/img/playlist-3.png">
+                            <a class="playlist-name">NIGHT FM</a>
+                            <button><span class="material-symbols-outlined">arrow_outward</span></button>
+                            <p>4h 36m</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
+</main>
 
-<div class="news">
-    <h2>Новости</h2>
-    <ul class="news-list">
-        <li class="news-card">
-            <img src="/img/news-pic-1.png" class="news-img">
-            <div class="news-info">
-                <p class="news-data">02.10.2024</p>
-                <a class="news-headline">Заголовок новости</a>
-            </div>
-        </li>
-        <li class="news-card">
-            <img src="/img/news-pic-1.png" class="news-img">
-            <div class="news-info">
-                <p class="news-data">02.10.2024</p>
-                <a class="news-headline">Заголовок новости</a>
-            </div>
-        </li>
-        <li class="news-card">
-            <img src="/img/news-pic-1.png" class="news-img">
-            <div class="news-info">
-                <p class="news-data">02.10.2024</p>
-                <a class="news-headline">Заголовок новости</a>
-            </div>
-        </li>
-        <li class="news-card">
-            <img src="/img/news-pic-1.png" class="news-img">
-            <div class="news-info">
-                <p class="news-data">02.10.2024</p>
-                <a class="news-headline">Заголовок новости</a>
-            </div>
-        </li>
-        <li class="news-card">
-            <img src="/img/news-pic-1.png" class="news-img">
-            <div class="news-info">
-                <p class="news-data">02.10.2024</p>
-                <a class="news-headline">Заголовок новости</a>
-            </div>
-        </li>
-        <li class="news-card">
-            <img src="/img/news-pic-1.png" class="news-img">
-            <div class="news-info">
-                <p class="news-data">02.10.2024</p>
-                <a class="news-headline">Заголовок новости</a>
-            </div>
-        </li>
-    </ul>
-</div>
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer">
+            <h4>Все права защищены, РАДИО-В</h4>
+        </div>
+    </div>
+</footer>
 
 
 
