@@ -6,10 +6,8 @@
 <header class="navigation">
     <div class="container">
         <nav class="nav-bar">
-            <a class="nav-logo" href="/">
-                <img src="/icons/icon-radio-logo.svg">
-            </a>
-            <ul class="nav-links">
+            <a class="nav-logo" href="/"><img src="/icons/icon-radio-logo.svg"></a>
+            <ul>
                 <li><a>О НАС</a></li>
                 <li><a>ПРОГРАММЫ</a></li>
                 <li><a>КОНТАКТЫ</a></li>
@@ -23,9 +21,9 @@
 
 <main>
     <div class="container">
-        <div class="main-cover">
+        <section class="home-main__cover">
             <h2>Анонсы</h2>
-            <div class="container swiper">
+            <div class="home-main__container swiper">
                 <div class="card-wrapper">
                     <ul class="card-list swiper-wrapper">
                         <li class="card-item swiper-slide">
@@ -63,100 +61,61 @@
                     <div class="sw-next selected-button-next"><span class="material-symbols-outlined">arrow_forward</span></div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="news">
+        <section class="home-news">
             <h2>Новости</h2>
-            <ul class="news-list">
-                <li class="news-card">
-                    <a>
-                        <img src="/img/news-pic-1.png" class="news-img">
-                        <div class="news-info">
-                            <p class="news-data">2 октября</p>
-                            <a class="news-headline">Иконы рока. Как всё начиналось: Крис Корнел</a>
-                        </div>
-                    </a>
+            <ul>
+                <li>
+                    <p class="home-news__data">2 октября</p>
+                    <p class="home-news__link"><a><img src="/img/news-pic-1.png">Иконы рока. Как всё начиналось: Крис Корнел</a></p>
                 </li>
-                <li class="news-card">
-                    <a>
-                        <img src="/img/news-pic-2.png" class="news-img">
-                        <div class="news-info">
-                            <p class="news-data">23 сентября</p>
-                            <a class="news-headline">«Русская Медиагруппа» выступила инфопартнёром мачта Лиги легенд «Зенит» - ЦСКА</a>
-                        </div>
-                    </a>
+                <li>
+                    <p class="home-news__data">2 октября</p>
+                    <p class="home-news__link"><a><img src="/img/news-pic-2.png">«Русская Медиагруппа» выступила инфопартнёром мачта Лиги легенд «Зенит» - ЦСКА</a></p>
                 </li>
-                <li class="news-card">
-                    <a>
-                        <img src="/img/news-pic-3.png" class="news-img">
-                        <div class="news-info">
-                            <p class="news-data">19 сентября</p>
-                            <a class="news-headline">Рок и автомобили: культовые машины рок-звезд</a>
-                        </div>
-                    </a>
+                <li>
+                    <p class="home-news__data">2 октября</p>
+                    <p class="home-news__link"><a><img src="/img/news-pic-3.png">Рок и автомобили: культовые машины рок-звезд</a></p>
                 </li>
-                <li class="news-card">
-                    <a>
-                        <img src="/img/news-pic-4.png" class="news-img">
-                        <div class="news-info">
-                            <p class="news-data">11 сентября</p>
-                            <a class="news-headline">21 сентября на «Moscow Raceway» состоится финал кольцевых автогонок суперкаров</a>
-                        </div>
-                    </a>
+                <li>
+                    <p class="home-news__data">2 октября</p>
+                    <p class="home-news__link"><a><img src="/img/news-pic-4.png">21 сентября на «Moscow Raceway» состоится финал кольцевых автогонок суперкаров</a></p>
                 </li>
-                <li class="news-card">
-                    <a>
-                        <img src="/img/news-pic-5.png" class="news-img">
-                        <div class="news-info">
-                            <p class="news-data">8 сентября</p>
-                            <a class="news-headline">История одного хита: Highway to Hell (AC/DC)</a>
-                        </div>
-                    </a>
+                <li>
+                    <p class="home-news__data">2 октября</p>
+                    <p class="home-news__link"><a><img src="/img/news-pic-5.png">История одного хита: Highway to Hell (AC/DC)</a></p>
                 </li>
-                <li class="news-card">
-                    <a>
-                        <img src="/img/news-pic-6.png" class="news-img">
-                        <div class="news-info">
-                            <p class="news-data">1 сентября</p>
-                            <a class="news-headline">Рокеры, чья дружба проверена временем</a>
-                        </div>
-                    </a>
+                <li>
+                    <p class="home-news__data">2 октября</p>
+                    <p class="home-news__link"><a><img src="/img/news-pic-6.png">Рокеры, чья дружба проверена временем</a></p>
                 </li>
             </ul>
-        </div>
+        </section>
 
-        <div class="about-container">
+        <section class="home-about">
             <h2>О компании</h2>
-            <div class="about">
-                <div class="about-txt"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
-                <ul class="about-playlists">
-                    <li class="playlist-card">
-                        <a>
-                            <img class="playlist-img" src="/img/playlist-1.png">
-                            <a class="playlist-name">MORRO ROCK</a>
-                            <button><span class="material-symbols-outlined">arrow_outward</span></button>
-                            <p>4h 36m</p>
-                        </a>
+            <div class="home-about__columns">
+                <p class="home-about__txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <ul>
+                    <li>
+                        <p class="home__playlist-name"><a><img src="/img/playlist-1.png">MORRO ROCK</a></p>
+                        <button><span class="material-symbols-outlined">arrow_outward</span></button>
+                        <p class="home__playlist-time">4h 36m</p>
                     </li>
-                    <li class="playlist-card">
-                        <a>
-                            <img class="playlist-img" src="/img/playlist-2.png">
-                            <a class="playlist-name">PACIFIC DREAMS</a>
-                            <button><span class="material-symbols-outlined">arrow_outward</span></button>
-                            <p>4h 36m</p>
-                        </a>
+                    <li>
+                        <p class="home__playlist-name"><a><img src="/img/playlist-2.png">PACIFIC DREAMS</a></p>
+                        <button><span class="material-symbols-outlined">arrow_outward</span></button>
+                        <p class="home__playlist-time">4h 36m</p>
                     </li>
-                    <li class="playlist-card">
-                        <a>
-                            <img class="playlist-img" src="/img/playlist-3.png">
-                            <a class="playlist-name">NIGHT FM</a>
-                            <button><span class="material-symbols-outlined">arrow_outward</span></button>
-                            <p>4h 36m</p>
-                        </a>
+                    <li>
+                        <p class="home__playlist-name"><a><img src="/img/playlist-3.png">NIGHT FM</a></p>
+                        <button><span class="material-symbols-outlined">arrow_outward</span></button>
+                        <p class="home__playlist-time">4h 36m</p>
                     </li>
                 </ul>
             </div>
-        </div>
+        </section>
     </div>
 </main>
 
