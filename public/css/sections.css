@@ -18,17 +18,20 @@
 .nav-bar {
 	display: flex;
 	height: 70px;
-	margin: 0 auto;
 	position: relative;
 	align-items: center;
+}
+
+.nav-bar nav {
+	margin: 0 auto;
 }
 
 .nav-bar ul {
 	display: flex;
 	list-style-type: none;
-	vertical-align: middle;
 	text-align: center;
 	margin: 0 auto;
+	vertical-align: middle;
 }
 
 .nav-bar li {
@@ -36,7 +39,7 @@
 	cursor: default;
 }
 
-.nav-links a {
+.nav-bar a {
 	display: block;
 	margin-right: 20px;
 	font-size: 14px;
