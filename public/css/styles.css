@@ -10,9 +10,39 @@
 	vertical-align: baseline;
 }
 
+h2 {
+	display: block;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 100%;
+	margin-bottom: 30px;
+}
+
 .container {
 	width: 1280px;
 	margin: 0 auto;
+}
+
+@media (max-width: 1280px) {
+	.container {
+		width: 992px;
+	}
+}
+
+@media (max-width: 992px) {
+	.container {
+		width: 576px;
+	}
+}
+
+@media (max-width: 576px) {
+	.container {
+        width: 375px;
+	}
+    h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
 }
 
 
@@ -27,6 +57,7 @@ p {
 ul li {
 	list-style: none;
 }
+
 
 body {
     background-color: white;
@@ -281,4 +312,20 @@ svg {
 	font-size: 14px;
 	font-weight: 600;
 	line-height: normal;
+}
+
+@media (max-width: 1280px) {
+	
+}
+
+@media (max-width: 992px) {
+    .main-footer {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+	.main-footer {
+        margin-top: 80px;
+    }
 }

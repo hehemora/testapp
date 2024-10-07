@@ -1,6 +1,8 @@
 
 /* Навигация */
 
+
+
 .navigation {
 	display: block;
 	width: 100%;
@@ -9,11 +11,6 @@
 	color: white;
 }
 
-.home-main__container {
-	display: block;
-	width: 100%;
-	margin: 0 auto;
-}
 
 .nav-bar {
 	display: flex;
@@ -39,22 +36,22 @@
 	cursor: default;
 }
 
-.nav-bar a {
+.nav-bar__link {
 	display: block;
 	margin-right: 20px;
 	font-size: 14px;
 	font-weight: 500;
-	cursor: default;
+	cursor: pointer;
 }
 
-.cms-log-btn {
-	display: block;
+.cms-auth {
+	display: flex;
 	position: absolute;
-	height: 40px;
-	width: 120px;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	right: 0;
-	top: 15px;
-	bottom: 15px;
 	background-color: white;
 	color: #212521;
 	font-size: 16px;
@@ -62,9 +59,11 @@
 	border-radius: 5px;
 	transition: 300ms ease-out;
 	cursor: pointer;
+	text-decoration: none;
 }
 
-.cms-log-btn:hover {
+
+.cms-auth:hover {
 	background-color: #FCEE0A;
 }
 
@@ -74,22 +73,19 @@
 	left: 0;
 }
 
-h2 {
+/* Слайдер */
+
+.home-main__container {
 	display: block;
-	font-size: 28px;
-	font-weight: 700;
-	line-height: 100%;
-	margin-bottom: 30px;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .home-main__cover {
 	display: block;
 	margin: auto;
 	margin-top: 100px;
-	margin-bottom: 150px;
 }
-
-/* Кнопки слайдера */
 
 .btn-prev .btn-next {
 	display: block;
@@ -100,6 +96,10 @@ h2 {
 	user-select: none;
 }
 
+.card-link {
+	cursor: pointer;
+}
+
 .card-item {
 	display: block;
 	width: 420px;
@@ -107,7 +107,7 @@ h2 {
 
 .card-wrapper {
 	display: block;
-	width: 1280px;
+	width: 100%;
 }
 
 .card-image {
@@ -144,8 +144,59 @@ h2 {
 	background-color: #FCEE0A;
 }
 
+@media (max-width: 1280px) {
+	.card-item {
+		width: 491px;
+	}
+	.card-image {
+		width: 100%;
+		height: auto;
+	}
+	.sw-next, .sw-prev {
+		top: 120px;
+	}
+	.home-main__cover {
+		margin-top: 100px;
+	}
+}
+
+@media (max-width: 992px) {
+	.card-item {
+		width: 100%;
+	}
+	.card-image {
+		width: 100%;
+		height: auto;
+	}
+	.sw-next, .sw-prev {
+		top: 150px;
+	}
+	.home-main__cover {
+		margin-top: 100px;
+	}
+}
+
+@media (max-width: 576px) {
+	.card-item {
+		width: 100%;
+	}
+	.card-image {
+		width: 100%;
+		height: auto;
+	}
+	.sw-next, .sw-prev {
+		top: 90px;
+	}
+	.home-main__cover {
+		margin-top: 80px;
+	}
+}
+
 /* Новости */
 
+.home-news {
+	margin-top: 150px;
+}
 
 .home-news ul {
 	display: flex;
@@ -173,7 +224,6 @@ h2 {
 	}
 }
 
-
 .home-news__link {
 	display: block;
 	position: absolute;
@@ -198,15 +248,67 @@ h2 {
 	cursor: default;
 	line-height: 120%;
 	padding-right: 10px;
+	cursor: pointer;
 }
 
 .home-news img {
 	display: block;
+	width: 130px;
+	height: 130px;
 	padding: 5px;
 	position: absolute;
 	top: 0;
 	left: 0;
 	border-radius: 10px;
+}
+
+@media (max-width: 1280px) {
+	.home-news ul {
+		columns: 2;
+		column-width: auto;
+		column-gap: 10px;
+	}
+	.home-news li {
+		width: 491px;
+	}
+}
+
+@media (max-width: 992px) {
+	.home-news {
+		margin-top: 100px;
+	}
+	.home-news ul {
+		columns: 1;
+		column-width: 100%;
+	}
+	.home-news li {
+		width: 100%;
+	}
+}
+
+@media (max-width: 576px) {
+	.home-news li {
+		width: 100%;
+		height: 100px;
+		margin-bottom: 5px;
+	}
+	.home-news img {
+		width: 100px;
+		height: 100px;
+	}
+	.home-news a {
+		font-size: 14px;
+	}
+	.home-news__link {
+		padding-left: 110px;
+		padding-top: 30px;
+	}
+	.home-news__data {
+		position: absolute;
+		left: 110px;
+		top: 10px;
+		font-size: 12px;
+	}
 }
 
 /* О компании */
@@ -260,6 +362,7 @@ h2 {
 	padding-left: 215px;
 	padding-top: 30px;
 	cursor: default;
+	cursor: pointer;
 }
 
 .home__playlist-name {
@@ -302,4 +405,69 @@ h2 {
 	line-height: 100%;
 	bottom: 30px;
 	right: 30px;
+}
+
+
+@media (max-width: 992px) {
+	.home-about {
+		margin-top: 100px;
+	}
+	.home-about__columns {
+		display: block;
+	}
+	.home-about__txt {
+		width: 100%;
+		margin-bottom: 30px;
+		margin-right: 0;
+	}
+	.home-about ul {
+		width: 100%;
+	}
+	.home-about li {
+		width: 100%;
+	}
+}
+
+@media (max-width: 576px) {
+	.home-about {
+		margin-top: 80px;
+	}
+	.home-about__columns {
+		display: block;
+	}
+	.home-about__txt {
+		font-size: 14px;
+		width: 100%;
+		margin-bottom: 20px;
+		margin-right: 0;
+	}
+	.home-about ul {
+		width: 100%;
+	}
+	.home-about li {
+		width: 100%;
+		height: 110px;
+	}
+	.home-about img {
+		width: 140px;
+		height: 110px;
+		padding: 5px;
+		border-radius: 10px;
+	}
+	.home-about a {
+		width: 100%;
+		padding-left: 150px;
+		padding-top: 15px;
+		font-size: 16px;
+	}
+	.home-about button {
+		padding: 5px;
+		left: 150px;
+		bottom: 15px;
+	}
+	.home__playlist-time {
+		bottom: 15px;
+		right: 15px;
+		font-size: 14px;
+	}
 }
