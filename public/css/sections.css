@@ -5,10 +5,13 @@
 
 .navigation {
 	display: block;
+	position: fixed;
+	top: 0;
 	width: 100%;
 	height: 70px;
 	background-color: #212521;
 	color: white;
+	z-index: 9998;
 }
 
 
@@ -49,13 +52,14 @@
 	position: absolute;
 	padding-left: 40px;
 	padding-right: 40px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 12px;
+	padding-bottom: 12px;
 	right: 0;
 	background-color: white;
 	color: #212521;
 	font-size: 16px;
 	font-weight: 600;
+	line-height: 100%;
 	border-radius: 5px;
 	transition: 300ms ease-out;
 	cursor: pointer;
@@ -71,6 +75,97 @@
 	display: block;
 	position: absolute;
 	left: 0;
+}
+
+.nav-bar button {
+	display: flex;
+	position: absolute;
+	padding: 8px;
+	right: 0px;
+	border-radius: 5px;
+	color: #212521;
+	transition: 300ms ease-out;
+	cursor: pointer;
+	visibility: hidden;
+	background-color: white;
+}
+
+.nav-bar button:hover {
+	background-color: #FCEE0A;
+}
+
+.nav-bar__mobile {
+	display: block;
+	z-index: 9;
+}
+
+
+@media (max-width: 993px) {
+	
+	.cms-auth {
+		right: 45px;
+	}
+	.nav-bar button {
+		visibility: visible;
+	}
+	.nav-bar ul {
+		display: none;
+		visibility: hidden;
+	}
+}
+
+/* Мобильная навигация */
+
+.nav-mobile {
+	position: fixed;
+	top: 70px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(33, 37, 33, 0.60);
+	z-index: 9998;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.nav-mobile ul {
+	display: block;
+	position: fixed;
+	background-color: white;
+	right: 0;
+	width: 400px;
+	height: 100%;
+	padding-top: 50px;
+}
+
+.nav-mobile li {
+	display: block;
+	width: 100%;
+	height: fit-content;
+}
+
+.nav-mobile a {
+	display: block;
+	padding-left: 50px;
+	padding-right: 50px;
+	width: inherit;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 100%;
+	transition: 300ms ease-out;
+	color: #212521;
+	cursor: pointer;
+}
+
+.nav-mobile a:hover {
+	color: white;
+	background-color: #212521;
+}
+
+.nav-mobile.open {
+	visibility: visible;
+	opacity: 1;
 }
 
 /* Слайдер */
@@ -123,7 +218,7 @@
 	user-select: none;
 	color: #212521;
 	background-color: white;
-	top: 90px;
+	top: 40%;
 	bottom: 0;
 	z-index: 2;
 	border-radius: 100%;
@@ -152,9 +247,6 @@
 		width: 100%;
 		height: auto;
 	}
-	.sw-next, .sw-prev {
-		top: 120px;
-	}
 	.home-main__cover {
 		margin-top: 100px;
 	}
@@ -168,9 +260,7 @@
 		width: 100%;
 		height: auto;
 	}
-	.sw-next, .sw-prev {
-		top: 150px;
-	}
+
 	.home-main__cover {
 		margin-top: 100px;
 	}
@@ -183,9 +273,6 @@
 	.card-image {
 		width: 100%;
 		height: auto;
-	}
-	.sw-next, .sw-prev {
-		top: 90px;
 	}
 	.home-main__cover {
 		margin-top: 80px;

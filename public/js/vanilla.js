@@ -29,6 +29,7 @@ document.getElementById("materials-btn").addEventListener('click', function() {
     }
 });
 
-document.getElementById("materials-close").addEventListener('click', function() {
+document.getElementById("close-nav").addEventListener('click', function() {
     document.getElementById("materials-list").classList.remove("open")
 });
+

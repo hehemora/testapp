@@ -1,3 +1,11 @@
+document.getElementById("burger-btn").addEventListener('click', function() {
+    if (document.getElementById("nav-mob").classList.contains("open") == true) {
+        document.getElementById("nav-mob").classList.remove("open")
+    } else {
+        document.getElementById("nav-mob").classList.add("open")
+    }
+});
+
 new Swiper('.card-wrapper', {
     // Optional parameters
     loop: true,
@@ -21,3 +29,5 @@ new Swiper('.card-wrapper', {
         },
     }
 });
+
+
