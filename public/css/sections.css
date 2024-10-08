@@ -131,10 +131,11 @@
 	display: block;
 	position: fixed;
 	background-color: white;
-	right: 0;
+	right: -400px;
 	width: 400px;
 	height: 100%;
 	padding-top: 50px;
+	transition: 300ms ease-out;
 }
 
 .nav-mobile li {
@@ -166,6 +167,9 @@
 .nav-mobile.open {
 	visibility: visible;
 	opacity: 1;
+	ul {
+		right: 0;
+	}
 }
 
 /* Слайдер */
@@ -197,7 +201,7 @@
 
 .card-item {
 	display: block;
-	width: 420px;
+	width: auto;
 }
 
 .card-wrapper {
