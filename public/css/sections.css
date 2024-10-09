@@ -123,8 +123,7 @@
 	height: 100%;
 	background-color: rgba(33, 37, 33, 0.60);
 	z-index: 9998;
-	visibility: hidden;
-	opacity: 0;
+	display: none;
 }
 
 .nav-mobile ul {
@@ -165,8 +164,7 @@
 }
 
 .nav-mobile.open {
-	visibility: visible;
-	opacity: 1;
+	display: block;
 	ul {
 		left: 0;
 	}
